@@ -1,0 +1,114 @@
+# The Necessary Mind: Strongest Steelman of the Theistic Route to R1
+
+**Status of this document.** In the necessity analysis, the theistic bridge (P\*f) was identified as the only route that secures R1 — necessarily, if concrete entities exist, some consciousness exists — *without* panprotopsychism: the rocks of a minimal world stay non-experiential because the necessary witness is a mind, not matter's intrinsic nature. This document builds the strongest possible case for that bridge, then reports honestly where it stands. It is a steelman, not an endorsement; per the established method of this exchange, every load-bearing beam is labeled and every cost disclosed.
+
+**What would count as success for a steelman.** Not a proof from neutral premises — the Camp-Marker Theorem already excludes that for every bridge to R1. Success is: the fewest contested moves, from the most widely shared starting points, with the largest explanatory payoff, and all weak points named. That is what follows.
+
+---
+
+## Part 1. The formal skeleton — and where all the weight sits
+
+The derivation of R1 is three lines:
+
+- **T1.** □∃x Mind(x) — necessarily, a mind exists.
+- **T2.** "Mind" analytically includes consciousness: □∀x (Mind(x) → Conscious(x)).
+- **C.** From T1–T2, □Conscious; since C₀ → (E → C₀) is a tautology for any C₀, necessitation and K give **□(E → Conscious)** — R1. ∎
+
+Valid, trivial, and — by the Bridge Constraint — *entirely hollow*: all content lives in T1. T2 is conceptual bookkeeping. So the steelman is the project of making **T1** maximally plausible, and everything below is scaffolding for that single premise. This is worth stating because the classical defenses of T1 (Gödelian ontological arguments, Plantinga's maximal greatness) are often criticized for exactly the right reason: they *derive* T1 from possibility axioms (possibly-God-like → necessarily God-like, under S5) whose plausibility is exactly co-extensive with prior theistic commitment. That route is available (Pruss's improved Gödelian version survives the Sobel modal-collapse objection), but it is dialectically inert: it transmits conviction without creating it. The strongest steelman does not go through greatness at all.
+
+It goes through **truth** and **contingency** — two braided routes, each supplying what the other lacks.
+
+---
+
+## Part 2. Route A — the argument from eternal truths (the strongest for this specific purpose)
+
+### The argument
+
+- **A1. There are necessary truths.** Mathematics and logic: that 2+2=4, that no proposition is both true and false — these could not have been otherwise. *Status: genuinely neutral common ground. Atheists, theists, Platonists, physicists, and even most nominalists concede some form of this. This is the steelman's decisive advantage over the Russellian bridge, whose every load-bearing premise ("matter has non-structural intrinsic natures," "acquaintance samples them") is camp-specific. Route A starts from ground everyone already occupies.*
+
+- **A2. A truth is a true proposition, and propositions are *about* their subject matter.** The proposition that 2+2=4 is about numbers; aboutness (intentionality) is not an optional decoration of propositional truth but its essence — a proposition is precisely the kind of thing that is *of* or *concerning* something. *Status: near-uncontroversial as a description of what propositions are; the phenomenology of mathematics (mathematicians *grasp* that-about-which they prove) corroborates.*
+
+- **A3. Aboutness, in every single instance we know of, is a state of mind.** Every known bearer of intentionality — thinking of Paris, imagining a triangle, fearing the exam — is mental. There is no known instance of non-mental, non-derivatively-mental aboutness. *Status: **the load-bearing beam.** Its causal analogue in the panprotopsychist argument (the single sample of intrinsic nature) is structural cousin to this, and the objections are cousins too.*
+
+- **A4. What is necessary cannot depend on the contingent.** The proposition that 2+2=4 exists and is about numbers in every possible world; its aboutness is as necessary as its truth — a truth that was only *incidentally* about its subject matter in some worlds and not others would not be a necessary truth at all. *Status: solid modal intuition; the necessity of the necessary truths' features.*
+
+- **A5. Therefore, necessarily, there is aboutness; with A3, necessarily, there is a mind.** A necessary realm of truths, essentially intentional, requires a necessary bearer of intentionality — a necessary mind. *Status: valid given A3, with one subtlety the steelman must disclose: the inference needs A3 **itself to be necessary** — □(aboutness → mentality) — not merely true. If intentionality were only contingently mental, some world could host non-mental aboutness. So the beam is not just "aboutness is mental" but "aboutness is *essentially* mental: an aboutness that is nobody's state of awareness is incoherent, not merely absent." That is the strong reading the argument needs, and it is precisely what the rival denies.*
+
+### The epistemology prong — the argument's second barrel
+
+Route A is usually stated as above and left vulnerable. The strongest version adds the problem Platonism has never solved:
+
+- **A6 (Benacerraf–Field).** If necessary truths are mind-independent abstracta, they are causally inert and spatiotemporally isolated; knowledge requires causal-or-constitutive access; so Platonism cannot explain how causally embedded brains *know* necessary truths — yet mathematics is the most reliable knowledge we possess.
+- **A7.** The necessary-mind hypothesis explains it immediately: we grasp necessary truths because they are *thoughts* — necessary thinking in which finite minds participate (Augustine's illumination; Descartes' mark of the true). The reliability of mathematical intuition stops being a miracle and becomes communion.
+
+*Status: this converts Route A from a one-line scholastic move into an inference to the best explanation with a genuinely unsolved rival problem on the other side. The Platonist's best current answer — structural access, we know structures by instantiating or resembling them (Shapiro's ante rem structuralism; Resnik) — explains our knowledge of patterns but not the truth-*about* character of that knowledge, which is where A3 re-enters.*
+
+### The main rival, stated fairly
+
+The Platonist replies: propositions carry primitive, non-mental aboutness; they are abstract "meaning-entities" whose intentionality is a basic feature, needing no thinker. The steelman's honest ledger:
+
+1. Primitive non-mental aboutness is an unexplained posit of exactly the "unknown X" form the parsimony governor (P4–P5 of the repaired argument) forbids — a sui generis category admitted solely to avoid a knower.
+2. It leaves A6 unsolved.
+3. But: the single-sample logic that licenses 1–2 is *the same logic* the panprotopsychist used, and it inherits the same ignorance-hypothesis objection (Stoljar's structure, relocated): "the only aboutness we know is mental" ≠ "the only aboutness there could be." The Platonist can bite this bullet consistently.
+4. **And the decisive modern threat is neither Platonist nor bullet-biting: it is computational intentionality.** If aboutness can be information-theoretic — syntax carrying semantics under the right functional organization — then abstracta could bear aboutness structurally and A3 fails without primitivism. Whether structural/computational intentionality exists is *exactly* the question the companion document (the Chu bridge) addresses. The two halves of this exchange are two candidate fillings of the same slot; the outcome of Route A and the outcome of the Chu-bridge phenomenal claim are not independent. This is stated now and developed in Part 5.
+
+---
+
+## Part 3. Route B — the argument from contingency
+
+Route A, alone, yields a necessary knower *of truths* — but a skeptic may grant necessary abstract truths and a necessary mind "merely as" their subject, while denying it grounds anything concrete. Route B supplies existence-grounding, and with it the explanation of why there is something rather than nothing — which no other bridge to R1 even attempts.
+
+- **B1 (PSR-lite).** The totality of contingent facts — not each fact serially, but the aggregate — requires an external ground. Defended in the weak, modal-collapse-proof form (Pruss): not "everything has an explanation" but "every contingent aggregate *can in principle* have one," which suffices to forbid a self-grounded totality and an infinite regress of aggregate-grounds. *Status: weaker than full PSR, hence more defensible, still denied by friends of brute contingency (van Inassen's "no explanation needed" stance). Disclosed: contested, but the weakest premise that does this work.*
+
+- **B2 (Proportionate causation).** A ground of the totality containing conscious states must itself contain what it grounds — in the scholastic formula, "formally, virtually, or eminently": the cause of consciousness must possess, at least eminently, consciousness itself. *Status: **the second load-bearing beam, and the one that does the most work while being least defensible.** Emergentism is precisely its denial: configured non-conscious matter genuinely produces novel conscious forms. The steelman cannot refute emergentism; it can only note that emergentism itself has an unresolved hard problem — the brute emergence of felt states from non-felt configurations is a "and then a miracle occurs" diagram wearing mechanism's clothes — so B2 trades on an opponent's weakness rather than its own strength. Honest bookkeeping.*
+
+- **B3 (Termination).** The regress of grounds cannot be infinite (the ground of the aggregate must be non-aggregate-dependent) → the terminal ground is necessary. *Status: standard; the infinite-regress tolerance of some metaphysicians is a background tax.*
+
+**Route B's conclusion:** a necessary ground of everything contingent, eminently containing consciousness. Braided with Route A: a necessary, essentially conscious, truth-knowing, world-grounding mind — which is the classical God minus will and moral attributes. (R1 needs only the intersection: necessary + conscious.)
+
+**Route B's unique payoffs, unavailable to any other bridge:**
+
+- It explains why anything exists (Route A never touches this; panprotopsychism presupposes it).
+- It explains the *contingency* of finite consciousness — why minds depend so fragilely on brains, why the distribution of experiencers tracks evolutionary accident. The panprotopsychist must say experiential nature is *always* instantiated yet only *organized* into minds contingently, which is coherent but strained; the theistic route has no such embarrassment: consciousness arises in creation by organization or bestowal, not by matter's nature.
+- It covers sparse worlds trivially: W_min's lone electron is grounded by the necessary mind regardless.
+
+---
+
+## Part 4. Objections, handled
+
+**Modal collapse (Sobel).** If God necessarily exists and necessarily wills the best, everything actual is necessary and modality dies. **Reply:** the steelman's derivation requires only □(God's existence ∧ essential consciousness), not any necessity of the world's contents. God's act can be free/indeterminate (the classical theist's answer; Pruss's formal treatment for those taking the Gödelian route). Modal collapse afflicts versions that overclaim — precisely the disease this conversation has been diagnosing in S — and the steelman declines the overclaim.
+
+**Kant: existence is not a real predicate.** Not in play: Routes A and B never treat existence as a predicate; they derive the necessary mind from the nature of truth and the structure of explanation.
+
+**Oppy: no argument for theism has premises an agnostic should accept.** Conceded — this is the Camp-Marker Theorem's theistic instance, and the steelman will not pretend otherwise. What the steelman *claims* is subtler: a **shortest-contested-path advantage**. Count the contested beams to R1:
+
+| Bridge | Contested moves |
+|---|---|
+| Russellian (panprotopsychism) | intrinsic natures exist; acquaintance samples them; single-sample extrapolation valid; uniformity at the base; parsimony metric — **~5** |
+| Theistic (A+B braid) | aboutness is essentially mental (A3); PSR-lite (B1); proportionate causation (B2) — **3, of which one (A1, necessary truths exist) starts from neutral common ground** |
+
+Fewer, heavier beams versus more, lighter ones. Whether that trade is rational is metric-relative — the same metric-relativity tracked since the joint assessment. But note the asymmetry in *starting points*: the theistic route is the only one whose first premise every camp already accepts.
+
+**Why not a necessary unconscious ground?** Route B alone permits it (a necessary field, a quantum vacuum, the number 3). That is exactly why the braid is needed: Route A's knower fills the slot Route B leaves type-unspecified. Conversely, Route A alone permits an ungrounded Platonic-mind complex; Route B's demand that the ground be non-aggregate seals it. Each route's gap is the other's contribution.
+
+**The problem of evil and divine hiddenness.** Out of scope, deliberately: those bear on the *full theistic package's* credibility, not on the modal bridge to R1. The steelman claims the bridge (necessary mind), not the Person. It is worth noting that the minimal claim is also available in non-theistic dress — Fichte's transcendental subject, the Hegelian Absolute, Plotinus' Nous — since R1 requires necessary mind, not a worshipful one. The classical God is one completion of the minimal necessary mind, not a premise of it.
+
+**Divine simplicity (Thomist nuance).** If the necessary being is absolutely simple, it does not *have* consciousness as an attribute; its knowing is its being (ipsum esse subsistens). R1 is unaffected — what must be necessary is that awareness exists, and on Thomism the divine act *is* awareness without composition. The steelman proceeds at the level of "necessary awareness" throughout, which all versions satisfy.
+
+**The theistic route's own "combination problem."** Fairness requires naming it: how do *finite* minds relate to the one necessary mind — created, participated, or (Berkeley's maximal version) constituted as ideas within it? The relation is the theistic analogue of the panprotopsychist's binding problem, and its solutions are similarly promissory. The Berkeleyan variant deserves mention as the over-achievement case: if all concreta are divine ideas, the bridge doesn't merely secure R1 — it collapses physics into experience entirely, at the cost of sacrificing the route's signature advantage, compatibility with a fully structural physics of the created order. The classical theist keeps the advantage by keeping matter non-mental; Berkeley spends it.
+
+---
+
+## Part 5. What the steelman actually achieves — the honest verdict
+
+1. **It is the shortest contested path to R1.** Three lines of logic, one contested beam set (A3; B1–B2), starting from the most neutral premise available to any bridge (necessary truths exist). No other route can say this. If the value of a bridge is measured in *distance from common ground to conclusion*, the necessary-mind route wins among all candidates examined in this exchange.
+
+2. **It is not a proof, and cannot be.** The Camp-Marker Theorem applies: whoever accepts A3 and B1–B2 was already en route to theism or idealism; whoever denies them has specific, consistent denials available (Platonism with primitive aboutness; brute contingency; emergentism). The Bridge Constraint locates the entire argument in A3 and B2, and those are the war, not the proof.
+
+3. **Its fate is bound to two open questions**, neither theological:
+   - **Platonism vs. conceptualism about intentionality** (A3). This is decided, if at all, by work in philosophy of mathematics and semantics — the access problem (A6) is the live front.
+   - **Emergentism vs. proportionate causation** (B2). This is decided, if at all, by the neuroscience of consciousness: a completed structural-dynamical theory of how felt states arise from organization would be emergentism's victory and B2's defeat.
+
+4. **It faces exactly one modern rival for the same prize — and the rivalry is precise.** Both this bridge and the computational bridge (companion document) accept the same formal picture: a duality with an inner pole (the intensional side — natures, states, meanings) and an outer pole (the extensional side — structure, outcomes, matter). The theistic route fills the inner pole with **mind**: aboutness must be mental, so the inner pole of reality is a necessary Knower. The computational route fills it with **structure**: aboutness can be information-theoretic, so the inner pole is self-dual process. They cannot both be right about the pole's nature; they agree about everything else, including the *shape* of reality's deep structure. The war between God and the Computer is a war over one slot's filling — and (this is the exchange's recurring theorem) no theorem decides fillings.
+
+**Final sentence of the steelman, in the house style of this exchange:** the necessary mind is the bridge to R1 that starts closest to where everyone already stands, costs the fewest contested premises, and explains the most; it is purchased at the price of two beams that its rivals deny with perfect consistency — and it will stand or fall not in a proof but in the long adjudication between aboutness-as-thought and aboutness-as-structure, which is to say, in the contest with the very bridge the next document examines.
