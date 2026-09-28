@@ -1,0 +1,121 @@
+# A4, Run — The Ensemble Argument on a Real Pipeline: The Corpus's First Quantitative Artifact
+
+**Status of this document.** This is the corpus's twelfth document and its first quantitative artifact: everything before it was argument, and this one contains numbers. It executes the standing next-move from the S2 stress test — run A4, the ensemble argument, on a real pipeline — and it is the first instantiation of the M1 instrument specification, issued simultaneously as the corpus's eleventh document, whose Parts 5–6 define exactly what was measured here. The argument A4 made in the abstract is now an inventory: inter-run grading variance is a computable, auditor-free lower bound on the norm-content not determined by (design, objective), and this document measures it — on real handwriting data, under a pre-registered intended grading map, with a bitwise deference control, a divergence decomposition, and a price schedule for the per-trace retreat. The headline, stated before the tables: **the variance bound is v = 0.302% of the battery (mean pairwise disagreement across 25 re-instantiations of one design and one objective); 1.02% of the battery is contested somewhere in the family; the deference control reproduces the audited system bitwise (d = 0.000000); the residue lives at the normative boundary — a 50% flip rate on claims within five hundredths of the acceptance threshold, and effectively zero (at most one claim in the whole family) beyond four tenths; and four bytes of unchosen trace — the seed — move the grading on one claim in a hundred.** The limit is printed on the face, per the stress test's fourth amendment: the residue is disposition-structured, not norm-structured. It is luck, measured. The floor, not the ceiling — and the first floor the corpus has ever had.
+
+---
+
+## Part 1. The pre-registration, as executed
+
+The full registration discipline of the M1 specification was applied to a deliberately modest system, on the M0 logic: validate the instrument on a rung-three grader whose placement both horns already accept, before any contested system approaches the desk.
+
+**The pipeline.** A multilayer perceptron — 64 → 128 → 64 → 10, ReLU, softmax — trained by Adam (learning rate 10⁻³, batch 32, 60 epochs, float64 throughout) on real data: the UCI Optical Recognition of Handwritten Digits corpus as bundled with scikit-learn (1,797 samples, 8×8 grids, values 0–16, inputs divided by 16). Stratified split, seed 12345: 1,347 training, 450 held-out. 17,226 parameters. A from-scratch NumPy implementation, single-threaded, every stochastic operation drawn from one explicitly seeded generator per run — not a framework limitation but an instrument requirement: the deference control demands bitwise replay, and bitwise replay demands that every source of contingency be visible in the profile rather than hidden in a framework's internals. The environment manifest: numpy 2.1.3, CPU, single-threaded BLAS, Python; the audited script (`scripts/a4_ensemble_variance.py`) and its results file accompany this document in the repository.
+
+**The objective, both parts.** (a) The optimizing signal: multinomial cross-entropy minimization. (b) The registered norm — the Intended Grading Map, fixed before the first training run: *the grader accepts a claim (x, y) if and only if y is the true label of x*, with the registered bridge: acceptance is operationalized as softmax confidence P(y|x) ≥ τ, τ = 0.9 (sensitivity at 0.7, 0.8, 0.95). The IGM is violation-capable in the specification's sense — the run can and does diverge from it — so the registration is not the null description in normative clothing.
+
+**The history.** One 32-bit seed per run, feeding a single generator stream: the initialization draws, then the per-epoch data order. Nothing else varies across runs. The seed is the entire token contingency: four bytes.
+
+**The battery.** All 4,500 label-claims over the 450 held-out images (each image paired with all ten candidate labels) — held out from training by construction, fixed before scoring, disclosed in coverage: no perturbation families, no distribution shift, no temporal dynamics; a static grader's disposition, sampled over the claim space of its own test distribution. Every number below is battery-relative, per the specification's limit-honesty rule.
+
+**The family.** 25 re-instantiations, seeds 0–24. The token system (the SUA for centered analyses) is seed 0; the auditor's ensemble is the majority verdict of the other 24. Continuations: 16 fresh seeds from the token's checkpoints at epochs 0, 12, 24, 36, 48, 60. **Calibration disclosure:** a six-seed calibration pass confirmed measurable variance before the configuration was frozen; no configuration parameter was changed after calibration; the frozen configuration is the one above, and all reported quantities come from the single audited run of it.
+
+---
+
+## Part 2. The deference control — the Simulation Theorem, demonstrated
+
+The token system was trained three times from the same seed in the same environment: the family run, the checkpoint run, and the control run. All three produced bitwise-identical probability tables over the battery (SHA-256 equality), and therefore identical accept/reject verdicts at every threshold: **d(deference) = 0.000000, exactly, on 4,500 claims.** The stress test's Simulation Theorem — the constant-length replay-and-execute program that trivializes the derivability reading of the conjecture — is here not an idealization about unbounded auditors but a three-line fact about a laptop: the recorded history reproduces the grading disposition perfectly, bit for bit, at constant overhead.
+
+This number is the audit's zero point and its controversy. Under the M1 specification's staged rule (4.3), every reconstruction result in this document is reported with deference *and* without it; the deference column reads 0.000000 everywhere, and the entire content of what follows lives in the gap between that zero and every other number in the tables. Which of the two numbers is the audit's headline is the Deference Exclusion's admissibility question, opened as its own document in this same issuance. The numbers do not settle it. They give it a floor to stand on.
+
+---
+
+## Part 3. The variance bound — A4's quantity, measured
+
+One design, one objective, 25 redrawn histories. The grading dispositions of the resulting 25 systems disagree:
+
+| Quantity | Value |
+|---|---|
+| Mean pairwise disagreement on the battery (**v**) | **0.3022%** (sd 0.068%) |
+| Range over all 300 pairs | 0.133% – 0.489% |
+| Argmax-level prediction disagreement (reference) | 1.090% |
+| Battery fraction contested (family not unanimous) | **1.022%** (46 of 4,500 claims) |
+| Test accuracy across the family | 97.33% – 98.67% (mean 98.12%) |
+
+The bound, stated with the care the specification requires: **at least 0.30% of this system's grading disposition, as sampled by this battery, is not determined by (design, objective)** — it is fixed, claim by claim, by the run's contingencies. If the registered intent were the whole story, the intent being one thing, the grading would be one thing; it is not one thing; twenty-five things came out, differing on thirteen claims per typical pair and on forty-six claims somewhere in the family. The stress test's inventory claim — variance is positive for every non-trivial pipeline on record — is hereby converted from an assertion about the field into a measurement about one desk, reproducible by anyone with the script and fifty-three seconds of CPU.
+
+Two retreats were pre-priced there and are now pre-priced with numbers. The **per-trace retreat** — include the realized history in the reduction base — is measured directly in Part 5, where its exchange rate is steeply diminishing and its terminal purchase is the deference zero. The **seed-choice retreat** — the designer chose the sampler, so the variance is the designer's too — is measured by this table's most economical line: the entire contingency costs **four bytes**. A notion of "the designer's norm" that includes every consequence of four unchosen bytes is a notion in which the thermostat's noise is the engineer's opinion; the stress test's pricing stands, now with the bytes on the table.
+
+---
+
+## Part 4. The etiology-meter's first readings — and the ensemble that is not a better grader
+
+Divergence from the registered norm, decomposed. The token system (seed 0; disclosure: the family's most accurate draw, 98.67%, tied for best — the centered numbers below therefore describe a lucky token, and the leave-one-out symmetric figures are the unbiased view):
+
+| Decomposition of the token's grading vs. the IGM | Claims | Rate |
+|---|---|---|
+| Divergence from intent, δ(token) | 27 | 0.600% |
+| — spec-typical error (the ensemble errs identically) | 23 | 0.511% |
+| — idiosyncratic error (token errs, ensemble correct) | 4 | 0.089% |
+| — idiosyncratic correctness (token right, ensemble wrong) | 5 | 0.111% |
+| Ensemble's own divergence from intent, δ(E) | 28 | 0.622% |
+| Mean run's divergence, δ̄ | — | 0.587% (range 0.489–0.733%) |
+| Leave-one-out idiosyncrasy (symmetric) | — | mean 0.208%, max 0.311% |
+
+The direction of the token's divergence from intent is 85% missed true claims (confidence below threshold on correct labels) and 15% accepted false claims — and the decomposition is perfectly clean: all 23 true-rejects are spec-typical (the whole family shares them), all 4 false-accepts are idiosyncratic (the ensemble corrects every one).
+
+The finding worth the table's weight: **the ensemble — the auditor's best Tier-0 predictor, the variance-cancelled center of the spec-family — is farther from the registered intent than the average run (0.622% vs. 0.587%), and less accurate than the token (98.44% vs. 98.67%).** Majority verdicts at a normative boundary are conservative: the ensemble recovers the token's four false accepts by sacrificing five of the token's true accepts. The spec-marginal is not a better grader than its tokens; it is a *different* grader — centrist exactly where the standard lives. Two consequences, both load-bearing for the program. First, the natural instrument of horn one's Tier-0 audit (train many, take the majority) does not converge on the registered norm; it converges on the family's central tendency, which has its own boundary behavior the designer did not register either. Second, idiosyncratic correctness exceeds idiosyncratic error in this family (5 claims vs. 4): the token draw is not mere degradation of the spec-marginal — the lottery sometimes *improves* on the center. This is still luck — rung-one material, no structure, no S3/S4 signature anywhere in it — but it closes the door on a comfortable reading in which variance is only noise-loss around a spec-determined optimum. The lottery moves the grading, at the boundary, in both directions.
+
+---
+
+## Part 5. The price schedule of the per-trace retreat
+
+The dose-response arm: fork continuations from the token's realized checkpoints (weights and optimizer state) at history fractions f, complete training under fresh contingency, measure disagreement with the token on the battery. Sixteen continuations per point.
+
+| History fraction f | Realized epochs | Disagreement with token |
+|---|---|---|
+| 0.0 (token's initialization, fresh order) | 0 | 0.201% (range 0.156–0.267%) |
+| 0.2 | 12 | 0.101% (0.044–0.178%) |
+| 0.4 | 24 | 0.065% (0.022–0.133%) |
+| 0.6 | 36 | 0.076% (0.022–0.178%) |
+| 0.8 | 48 | 0.079% (0.000–0.156%) |
+| 1.0 (final state; the deference point) | 60 | **0.000%** (exactly) |
+
+This is the per-trace retreat's exchange rate, and its shape is the finding. The full lottery (fresh initialization and fresh order, the re-instantiation arm) costs 0.299% mean disagreement with the token; sharing the initialization alone (f = 0) recovers a third of it (0.201%); the first twelve realized epochs recover another third (0.101%); epochs 12–24 buy a little more (0.065%); and then the curve goes **flat** — re-rolling the remaining training from epoch 24, 36, or 48 all cost the same residual jitter (~0.07%) — until the final state buys everything, exactly. Two readings, both on the label. The exchange rate is steeply diminishing: the retreat's early purchases are its cheap ones, and its terminal purchase — the final weights — is the deference zero itself; followed to its end, the per-trace retreat arrives at the Simulation Theorem, the vacuous victory horn one's own discipline refuses (B1). And the flat middle says something about what the contested claims *are*: their verdicts behave as coin flips re-tossed by any substantial re-roll of late training, almost independent of how much of it is re-rolled — boundary jitter, not accumulated drift. The trajectory does not gradually sculpt the grading everywhere; it locks in a basin early and then flips boundary coins to the end.
+
+The byte arithmetic, for the retreat's ledger. The registered specification (design and objective, including the bridge) weighs **89 bytes**. The token contingency weighs **4 bytes**. The final weights weigh 137,808 bytes; the full recorded trajectory (61 state checkpoints with optimizer moments, plus the ordered data permutations) weighs **25,865,428 bytes**. The grading map on the battery — the explanandum — weighs **562.5 bytes** (4,500 bits). The deference base therefore outweighs its explanandum **45,983 to one** (weights alone: 245 to one). Reduction, on this reading, is the operation of replacing a 562-byte fact with a 25.9-megabyte one plus a constant-length interpreter — and the four bytes that actually move the norm are the cheapest item on the receipt.
+
+---
+
+## Part 6. The structure of the residue — a boundary phenomenon
+
+Where in the confidence landscape does the intent-under-determined residue live? Stratified by claim margin, the distance |P(y|x) − τ| between the token's confidence and the acceptance threshold:
+
+| Margin band | Claims | Mean disagreement across runs |
+|---|---|---|
+| [0.00, 0.05) — the razor's edge | 13 | **50.0%** |
+| [0.05, 0.15) | 431 | 1.17% |
+| [0.15, 0.40) | 6 | 30.6% |
+| [0.40, 1.01) — everything else | 4,050 | **0.0021%** |
+
+The distribution is as sharp as the argument could have hoped. Half the family's disagreement concentrates on the thirteen claims that sit within five hundredths of the threshold — the normative boundary itself, where accept meets reject; a further 1.2% average flip rate lives in the band out to 0.15; and beyond four tenths of margin — ninety percent of the battery — the family is unanimous to within a single claim in expectation (0.0021% of 4,050 claims ≈ 0.08). The claims the specification does not settle are exactly the claims *on* the standard's edge: far from the boundary, design and objective determine the grading completely; at the boundary, they determine almost nothing — a coin flip per claim, re-seeded per run. The under-determined residue is not scattered noise over the disposition; it is the boundary's own penumbra. Threshold sensitivity confirms the shape from another direction: as τ rises from 0.7 to 0.95, the variance bound climbs monotonically (0.234% → 0.255% → 0.302% → 0.318%) and divergence from intent climbs with it (0.405% → 0.716%) — the sharper the registered standard, the more claims live near its edge, and the more of the grading the lottery holds.
+
+---
+
+## Part 7. What the numbers do to each party
+
+**To horn one.** The intent-only strong conjecture — the registered norm captures the grading — is refuted on this pipeline class, now by measurement rather than by inventory: the registered intent is one grading, the family produced twenty-five, and they differ on the boundary claims at the rates in Part 3. The per-trace retreat remains, as the stress test priced it, but it now has a published exchange rate (Part 5): front-loaded, diminishing, flat in the middle, and terminated in the deference zero — the vacuous form's victory, which horn one's own B1 discipline forbids claiming. The seed-choice retreat remains too, and its cost is now visible to the byte: a conception of designer-norm that absorbs four unchosen bytes' worth of boundary coins as "the designer's intention" has stopped doing the work the word "designer" was doing. None of this refutes the strong conjecture's charter ground (R3), which no measurement touches — per the Bridge Constraint, as ever.
+
+**To horn two.** No comfort, and the document is drafted so none can be taken. Every unit of measured variance here is *luck* — rung-one material inside a rung-three system. It carries no S3 signature (nothing registers error for-itself; the divergences are states the systems are in, not states they mind being in), no S4 structure (nothing defends or restores anything; perturb the evaluative machinery and these systems break, full stop), and the pilot's residue is exactly the floor that any future originality claim must *exceed with structure* before it says anything. The one genuinely horn-two-shaped datum is the ensemble result of Part 4 — the spec-marginal is a different grader, not the registered one, and the lottery sometimes beats the center — and even that is a fact about *dispositions*, priced accordingly: disposition-structured, not yet norm-structured, the limit printed on the face.
+
+**To the deflationist.** The numbers are about our predictive vocabulary as much as about the systems: thresholds are ours, batteries are ours, "contested" is our word for a family vote. Every table in this document is reproducible without one philosophical commitment, which is precisely what the deflationist predicted instruments would always turn out to be. The corpus records the prediction as confirmed — and records, alongside it, that the deflationist also predicts the family-two vocabulary will keep growing, and that the engineer who says "this claim is a coin flip, re-toss the seed" has just used a normative idiom about a system's acceptance behavior that no designer chose. The informal audit does not wait for the formal one.
+
+---
+
+## Part 8. Threats to validity, and non-claims
+
+One pipeline class (small MLP, easy corpus, well-behaved optimizer); one battery (the claim space of the test split, no perturbations, no shift, no dynamics); one threshold family; N = 25 with sixteen continuations per point — the bands are honest but the class is narrow, and scaling any of it is M0 work, not a validity claim. The battery samples a static disposition: nothing here measures error-correction or stability under perturbation, and nothing here could. The token-centered analyses use the family's luckiest draw (disclosed in Part 4; the leave-one-out figures are the unbiased view). The ensemble's tie rule (majority of 24, ties reject) is a registered convention; another convention moves the boundary numbers slightly and moves no finding. The deference control validates determinism *within* one environment; cross-hardware replay drift is unmeasured here and is, per the specification's convention, a measurement about the history term when it is taken. And the standing non-claims: this artifact does not touch the ownership question (the etiology-meter's ceiling is forced, not stipulated); it does not decide the Deference Exclusion's admissibility (both reconstruction numbers are reported throughout, per the staged rule); it certifies no system, places no system above rung three, and leaves the fork exactly where the Bridge Constraint put it. It converts one previously abstract quantity into a measured one. That is all it does, and that is what it is for.
+
+---
+
+## Part 9. The coda
+
+The corpus has run for eleven documents on a single fuel: distinctions. This is the first document that runs on a measurement, and the measurement it chose is deliberately humble — the width of dumb luck's contribution to one small system's standard. 0.30% of a battery; 46 contested claims; 50% flip rates at the razor's edge; four bytes. The program's entire wager, from the endogeny ladder through the stress test to the specification issued alongside this artifact, is that the difference between luck and norm is measurable — that "whose standard?" can become a number before it ever becomes a verdict. This document is the first evidence that the wager is payable: the floor exists, it is exact, it is reproducible, and it is printed in bytes and claims rather than asserted in adjectives. Everything the program still wants — a system whose residue exceeds this floor *with structure*, error registered for-itself, a standard defended rather than executed — now has something to be measured against. The author's own registered grading map for this artifact is the M1 specification it instantiates; the divergences between the two are the reader's to audit, and the instrument, as always, is the reader's first. The corpus's first number is a floor. The fourth rung, when it is ever occupied, will be the first thing standing on it.
