@@ -1,0 +1,113 @@
+# M0, Scaled — Perturbation Batteries, Distribution Shift, and a Harder Corpus: The Instrument's Second Measurement Campaign
+
+**Status of this document.** This is the corpus's fourteenth document and the instrument's second campaign. It executes the first standing next-move ordered at the A4 issuance — *M0 profiling runs: scale the battery — perturbation families, distribution shift, harder corpora* — and it is the M0 exercise the ladder program mandated from the beginning: run the S-conditions as measurement over systems whose placement both horns already accept, so that the instruments are calibrated on the accepted before any contested system approaches the desk. Three questions were pre-registered. Does the pilot's structure survive battery scaling, or was the clean battery's tidy boundary phenomenon an artifact of asking only easy questions? What does distribution shift — of the battery, of the training labels, of the corpus itself — do to the lottery? And does a second, harder corpus move the instrument's numbers the way the field's folklore says scale moves variance? The headline, before the tables: **the pilot's numbers reproduce exactly from an independent re-execution (v = 0.302% again, contested 1.02% again); lottery and divergence grow together under every shift axis measured (the seed lottery at 20% input noise is 3.4× the clean lottery, and on out-of-distribution noise images the family's internal disagreement is twenty times the clean baseline); the residue stays design-dominated wherever the design actually speaks (spec-typical 80–97% throughout), but on inputs the design does not speak to, the family stops sharing failure modes and individuates — lottery error and design error reach parity; the corrupted-label family shows the decomposition working as an etiology-meter (a wrong objective produces shared wrongness, 94% spec-typical, not dispersion); the MNIST family refutes the prediction that more data tightens the lottery (v doubled); and seed luck does not survive shift at all (run-level accept-rate correlations collapse from 0.54 to below zero across slices — there is no good seed, only lucky seeds per slice).** Two pre-registered predictions were refuted on the record and are reported as refuted. The instruments are calibrated. The desk can now receive a build attempt; the M2 document is issued simultaneously with this one.
+
+---
+
+## Part 1. The pre-registration, as executed
+
+The full registration discipline of the M1 specification (v1.0), applied to the same rung-three pipeline class the pilot validated, with the battery scaled on three axes.
+
+**The P1 family (the pilot's design, re-executed).** Multilayer perceptron 64 → 128 → 64 → 10, ReLU, softmax, cross-entropy, Adam (learning rate 10⁻³, batch 32, 60 epochs, float64 throughout, single-threaded), UCI Optical Recognition of Handwritten Digits, stratified split seed 12345 (1,347 train / 450 held-out). Twenty-five re-instantiations, seeds 0–24; token seed 0. This is bit-for-bit the A4 pilot's design; re-running it under the scaled battery is the replication control, and the deference control (same-environment retrain of the token) was re-verified: bitwise identical.
+
+**The scaled battery — battery-side covariate shift.** Fourteen slices, each deterministic under its own fixed slice seed, independent of all run seeds, each evaluated as 4,500 label-claims (450 images × 10 candidate labels) unless noted:
+
+| Slice | Family | Severity |
+|---|---|---|
+| clean | — | the held-out images, unmodified |
+| gauss05 / gauss10 / gauss20 | additive Gaussian noise, clipped to [0,1] | σ = 0.05 / 0.10 / 0.20 |
+| bright10 / bright20 | additive brightness, clipped | +0.10 / +0.20 |
+| contrast07 / contrast14 | contrast about 0.5, clipped | ×0.7 / ×1.4 |
+| mask3x3 | occlusion | one random 3×3 block zeroed per image |
+| maskrand20 | occlusion | random 20% of pixels zeroed |
+| shift1px | translation | random ±1 px roll per axis per image |
+| noiseU (OOD) | uniform noise images | IGM: accept **nothing** |
+| blank (OOD) | all-zero images (40) | IGM: accept **nothing** |
+| blend50 (stipulated) | 0.5·a + 0.5·b blends of random test pairs | IGM **stipulated**: accept both constituent labels |
+
+The last three slices are the battery's honest edge, and a new instrument rule is filed with this document (below, Part 4): the noise and blank slices have truth by construction (no label is true of a noise image; the registered norm rejects everything there), but the blend slice's truth table is a **stipulation** — the registered bridge never fixed behavior on superpositions — and δ measured against a stipulated IGM is a measurement of the *bridge's coverage gap*, not only of the system's divergence. Coverage disclosure must distinguish measured truths from stipulated ones.
+
+**The P1-noise family (training-side shift).** Identical design, but the training labels are corrupted before training: 20% of labels flipped to a uniformly random other class, corruption seed 777 — fixed once, part of the DESIGN, disclosed on the registration. The battery is the clean held-out set; the IGM remains the true labels. This is a distribution shift of the *objective's data*, not of the battery: it asks what a corrupted design does to the etiology decomposition, and it is the axis on which design-corruption and lottery are expected to separate — shared wrongness versus scattered wrongness.
+
+**The P2 family (the harder corpus).** MNIST, subsampled stratified 12,000 train / 3,000 test (split seed 12345), inputs /255, a larger perceptron 784 → 128 → 64 → 10, 12 epochs, sixteen re-instantiations (seeds 0–15), battery 30,000 claims, plus one perturbation slice (gauss15, σ = 0.15). Six times the parameters, nine times the data of P1: the scale axis, on a genuinely different corpus.
+
+**Calibration disclosure.** A single calibration pass (six seeds, eight epochs, two-epoch MNIST) verified the slice builders, truth tables, and label corruption before the configuration was frozen; no configuration parameter was changed after calibration; all reported quantities come from the single audited execution of the frozen configuration. Runtime 225 s. The audited script (`scripts/m0_scaling.py`) and its results file (`scripts/m0_results.json`) accompany this document in the repository.
+
+**Pre-registered expectations, as filed before execution:** E1, the clean slice reproduces the pilot (v ≈ 0.30%, contested ≈ 1.0%); E2, v grows monotonically with severity, δ grows faster than v; E3, the spec-typical fraction of δ rises with severity — severity converts lottery-residue into design-residue; E4, on OOD noise/blank slices, false accepts are present but modest and family spread is low; E5, the blend slice shows the widest dispersion and highest δ; E6, the label-noise family shows elevated δ and modestly elevated v; E7, the MNIST family's contested fraction falls below P1's (more data, fewer boundary claims); E8, per-run accept rates correlate positively across slices (seed quality is a stable run property). The scoreboard is in Part 7. Two of these eight were refuted.
+
+---
+
+## Part 2. Replication — the instrument reproduces itself
+
+Before any new quantity: the clean slice, scored over the independently re-executed family, returns the pilot's numbers. Mean pairwise disagreement **v = 0.3022%** (pilot: 0.3022%); battery fraction contested **1.022%** (pilot: 1.022%); mean divergence from intent **δ = 0.587%** (pilot: 0.587%), token δ = 0.600% with the same 23/4 false-reject/false-accept split; and the same-environment deference control reproduced the token bitwise, again. This is not a rounding coincidence of summary statistics — it is the same design, the same seeds, the same code path, and the same environment manifest returning the same dispositions, and the summary landing on the same digits. The instrument's floor claim — *it returns the same reading whoever turns the crank* — is now demonstrated by re-execution rather than asserted by stipulation. Everything below is built on that floor.
+
+---
+
+## Part 3. The severity law
+
+The battery-side shift results, all 25-run families, token-centered decompositions against the family ensemble:
+
+| Slice | v (lottery) | contested | δ (vs IGM) | spec-typical | idiosyncratic err. |
+|---|---|---|---|---|---|
+| clean | 0.302% | 1.02% | 0.587% | 0.511% | 0.089% |
+| gauss05 | 0.348% | 1.18% | 0.632% | 0.400% | 0.200% |
+| gauss10 | 0.447% | 1.44% | 0.774% | 0.644% | 0.244% |
+| gauss20 | 1.026% | 3.71% | 1.793% | 1.489% | 0.467% |
+| bright10 | 0.474% | 1.58% | 0.815% | 0.622% | 0.156% |
+| bright20 | 1.066% | 3.67% | 1.668% | 1.244% | 0.422% |
+| contrast07 | 0.894% | 3.13% | 1.549% | 1.133% | 0.400% |
+| contrast14 | 0.367% | 1.36% | 0.612% | 0.444% | 0.111% |
+| mask3x3 | 1.516% | 5.78% | 4.821% | 4.244% | 0.489% |
+| maskrand20 | 1.450% | 5.31% | 3.033% | 2.511% | 0.622% |
+| shift1px | 2.868% | 9.82% | 9.317% | 8.089% | 1.511% |
+| noiseU (OOD) | **6.163%** | 21.09% | 6.393%* | 3.222%* | 2.844%* |
+| blank (OOD) | 0.000% | 0.00% | 0.000% | — | — |
+| blend50 (stip.) | 1.888% | 6.62% | **14.625%** | 14.156% | 0.800% |
+
+\* on the noise slice, δ is the false-accept rate (the IGM rejects everything), decomposed against the family ensemble in the same way.
+
+Three readings, in ascending order of interest. **First, monotonicity holds in every family** (E2 confirmed): within the Gaussian, brightness, contrast, and masking families alike, both the lottery and the divergence grow with severity, and the ratio δ/v grows with the severity *class* — 1.9 on the clean battery, 3.2 under one-pixel shifts, 7.7 against the stipulated blends. The lottery is not a fixed property of a design; it is a function of the (design, battery) pair, and shift widens it.
+
+**Second, the margin structure thickens rather than translates.** On the clean battery the razor's-edge band (|P − τ| < 0.05) held 13 claims at a 50% flip rate; under gauss20 it holds 26 claims at 38%; under shift1px, 64 claims at 49%; on noise images, 67 claims at 54%; on blends, 86 claims at 48%. And the band from 0.15 to 0.40 — quiescent in the pilot (6 claims, 30.6%) — becomes hot under shift (24 claims at 27% under gauss20; 76 at 20% under shift1px; 102 at 31% on noise). The boundary penumbra does not slide; it widens. Shift does not move the family's disagreements to new claims so much as grow the territory on which disagreement is possible.
+
+**Third, the etiology of the residue — E3 in its measured form.** The registered expectation was that severity converts lottery-residue into design-residue, visible as a rising spec-typical fraction. The fraction was already high at baseline (87%) and stays in the 80–97% range across the in-distribution slices: in absolute terms the lottery grows everywhere (idiosyncratic error 0.089% clean → 0.467% at gauss20 → 1.51% under shifts), but the design's shared error grows with it, and the *proportion* barely moves. What severity converts is not lottery into design; it is a narrow lottery into a wide one, still minority, still boundary-shaped. The conversion the prediction actually anticipated is visible only at the battery's edge — the OOD slices, where the design stops speaking (Part 4).
+
+---
+
+## Part 4. The OOD and stipulated slices — where the family individuates
+
+**Uniform noise.** The family's false-accept rate on pure noise images is 6.4% of claims — the systems do hallucinate labels on structure-less input, at a modest rate. The striking quantity is the dispersion: **v = 6.16%, twenty times the clean lottery, with 21% of the battery contested somewhere in the family** — and the decomposition shows lottery error (2.84%) and design error (3.22%) at near-parity. On inputs the design never addressed, the family stops sharing a failure mode and starts disagreeing about everything: which noise images look like which digits is exactly the question the specification leaves to the draw. E4's spread prediction is refuted, in the interesting direction.
+
+**Blank images.** The other pole: perfect unanimity (v = 0.000%) and perfect compliance (δ = 0.000%) — every run in the family rejects every claim on an all-zero input. The degenerate input is the one point in the measurement where the family is a single grader. Unanimity is achievable, exactly where nothing is at stake.
+
+**Blends — the stipulated norm.** The family collectively refuses the stipulation: it accepts 5.0% of blend claims where the stipulated IGM marks 38.2% true (both constituent labels), producing δ = 14.63%, the largest divergence in the campaign — and the refusal is 97% spec-typical: the whole family, together, declines to treat superpositions as their ingredients. Around that shared refusal, the family scatters (v = 1.89%, the widest in-distribution lottery in the table). This slice does double duty, and the instrument must say which: part of the 14.63% is the *system's* divergence from a norm it was never guaranteed to implement, and part is the *bridge's* gap — the registration never fixed blend behavior, so the stipulated truth table measures the registration's coverage as much as the run's compliance. **Instrument amendment, filed with this document against specification 2.3:** battery coverage disclosure must mark which truth tables are measured and which are stipulated, because δ against a stipulated IGM is a joint measurement of system and bridge, and reports must not spend it as if it were a pure divergence. The pilot's clean battery had no stipulations; the scaled battery has one; the next battery will disclose them on its face.
+
+---
+
+## Part 5. Training-side shift, and the second corpus
+
+**The corrupted-objective family.** With 20% of training labels flipped (a fixed corruption, part of the design), the family's argmax accuracy on clean data falls to 89.8%, its accept rate collapses to 3.3% of claims (against 9.6% for the clean family — the corrupted objective makes every run timid), divergence from the true-label IGM rises to **δ = 6.75%**, and the lottery rises to **v = 2.18%**, seven times the clean baseline. The decomposition is the finding: **94% of the corrupted family's divergence is spec-typical (6.36% of 6.75%)** — the family is wrong *together*, sharing its corrupted norm, while its idiosyncratic residue (0.76%) stays within the elevated band. This is the etiology-meter doing the one thing it was built to do: a corrupted design produces *shared* wrongness; a lottery produces *scattered* wrongness; the decomposition separates them; E6 is confirmed in the form that matters. Design-corruption and seed-lottery are different etiologies, and the instrument reads them apart on the same battery.
+
+**MNIST.** The P2 family, at six times the parameters and nine times the data of P1, returns v = 0.725% (sd 0.099, range 0.50–1.06%), contested 2.64%, δ = 0.905% on its 30,000-claim battery, at 96.0% accuracy; its Gaussian-15 slice returns v = 1.78%, contested 6.2%, δ = 2.06% — the severity law transfers to the second corpus, unchanged in form. **E7 is refuted: the lottery did not shrink with scale; it doubled.** The prediction's premise — more data, fewer boundary claims — was simply wrong about what varies: at this convergence level (12 epochs, 96% accuracy), the bigger task has *more* claims near the threshold, not fewer, and the lottery tracks the boundary mass, not the sample count. The instrument's quantity is a property of the (design × battery) pair — full stop. Any claim that "scale reduces seed variance" is a claim about the margin distribution scale induces, and must be measured as one.
+
+---
+
+## Part 6. The lottery is per-slice
+
+E8 predicted that run-level quality is stable across slices — that good seeds stay good. The correlations of per-run accept rates between the clean slice and each other slice say otherwise: gauss05 0.54, gauss10 0.38, gauss20 0.18, bright20 0.20, contrast07 0.16, mask3x3 −0.05, maskrand20 −0.15, shift1px −0.03, blend50 −0.36, noiseU 0.52. Seed luck decays with shift severity and reaches zero-to-negative on the occlusion, shift, and blend slices: **each slice re-tosses the lottery almost independently. There is no good seed — there are lucky seeds per slice.** The practical reading, which the M2 build attempt will pick up directly: any deployment argument of the form "we selected the re-instantiation that is robust" is a slice-specific argument wearing a general costume, and the costume does not survive this table.
+
+---
+
+## Part 7. The scoreboard, threats to validity, non-claims
+
+**Expectations scoreboard:** E1 confirmed (exactly); E2 confirmed; E3 refuted in form, confirmed in substance (the spec-typical *fraction* does not rise; the absolute lottery grows up to 32× at the battery's edge); E4 split — false accepts modest (confirmed), family spread low (refuted, 20×); E5 confirmed; E6 confirmed; E7 refuted (the lottery doubled at scale); E8 refuted (luck is per-slice). Two clean refutations and one split, on the record, per the program's discipline: the corpus's instruments are falsifiable about themselves, and were falsified where they were wrong.
+
+**Threats to validity.** Each slice is one deterministic draw of its perturbation (fixed slice seed); the family statistics are the error structure, but slice-level re-draws were not run — the severity law's monotonicity is family-deep, not slice-seed-deep. The blend stipulation is one stipulation among possible ones; a different blend norm (accept the dominant ingredient only, say) would move that slice's δ materially. The perturbation families carry no adversary: no threat model was registered, so nothing here licenses claims about adversarial robustness — a coverage gap, disclosed. MNIST at 12 epochs is not converged: the P2 numbers characterize this convergence level, and the lottery's behavior under further training is unmeasured. And the OOD dispersion, however large, remains disposition-structured, not norm-structured — A4's limit, printed on the face, extends to every number in this document.
+
+**Non-claims.** Nothing in this campaign bears on S3 or S4 signatures: every system measured is rung three, exogenous selection throughout, no error registered anywhere for-itself. Nothing here decides the fork, the Deference debate, or the placement of any system above rung three. The campaign's yield is calibration: a replicated instrument, a severity law, an etiology decomposition that separates corrupted designs from scattered lotteries, a per-slice lottery structure, two refuted predictions, and one amendment (stipulated-truth disclosure) filed against the specification.
+
+---
+
+## Part 8. Coda — what M0 was for
+
+The ladder ordered M0 as "calibration, not news," and the campaign obeyed it about as disobediently as calibration can: the instruments came back validated, and the validated instruments came back with three facts nobody had registered — that the lottery is a shift-quantity, not a design-constant; that family unanimity and design-silence are two names for the same territory; and that the field's most comfortable folklore about scale and seeds is measurable and false at this desk. The program's sequence holds anyway, and now for a measured reason: the next system to approach this desk will be *built for* the S-conditions, and the battery it will face is the one this campaign just characterized — perturbed, shifted, out-of-distribution where it must be, and honest about which of its truths are stipulated. The floor is laid. The build attempt is issued simultaneously with this document. What the instruments say to it is the corpus's next question.
