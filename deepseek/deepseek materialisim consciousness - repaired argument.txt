@@ -1,0 +1,154 @@
+# The Repaired Argument: Existence and Proto-Experience
+
+**Status of this document:** A reconstruction of the argument in `deepseek materialisim consciousness.txt` (call it S), rebuilt to survive both audits of S: the Super Z critique (Z) and the DeepSeek audit (D). This is the honest salvage test: if the position can be saved, it can only be saved by paying the costs both audits identified. This document pays them and reports what survives.
+
+**Headline result, stated up front:** The *position* survives — as a conditional research program. The *theorem* does not survive at all. Every element of S that made it exciting (necessity, proof-status, uniqueness, the elimination of materialism) is exactly what the repair must remove, because that excitement was purchased with the fallacies both audits diagnosed. The repaired argument is valid and non-question-begging as far as it goes — and it goes almost nowhere: it ends in a conditional, metric-relative tie between two hypotheses.
+
+---
+
+## Part 0. What "repaired" can honestly mean
+
+Z showed S fails its own stated success criterion (the consciousness premise is smuggled in as Principle B). D showed eleven line-level defects — and then D's own repairs re-committed six of them. The lesson of both audits: any repair that preserves S's conclusion (E ⇒ C as a *proven*, *necessary* claim) must contain a bridge premise strong enough to carry it, and every available bridge is either the conclusion in disguise or a thesis at least as contested as the conclusion (proof sketch in the companion analysis on necessity — the "Bridge Constraint").
+
+Therefore the repair strategy here is not "fix the proof" but **right-size the claim**: rebuild the argument so that every premise is explicitly flagged with its denial cost, every bridge is disclosed rather than concealed, and the conclusion shrinks to what the premises actually support. A valid argument with a modest conclusion beats an invalid argument with a profound one.
+
+---
+
+## Part 1. The bridge, disclosed
+
+**D1 (The datum).** Experience occurs; and in undergoing it, we *seem* to be acquainted with a way things are that is not exhausted by any structural/relational description of it.
+
+*Status:* The existence of experience is granted by nearly every live position. The *seeming-acquaintance reading* is contested — illusionism (Frankish, Dennett) accepts the seeming and denies it is veridical about intrinsic qualia; representationalist accounts of introspection deny that "inside access" reveals non-representational properties. **D1 mentions experience openly. This is disclosed, not concealed.** The argument below does not pretend to derive experiential vocabulary from non-experiential premises — S's central pretension, which Z's A1 and D's Issue 3 jointly demolished. What D1 supplies is not a hidden engine but a *sample* — one data point about intrinsic natures, *if* there are intrinsic natures at all (Part 3 conditions on this).
+
+---
+
+## Part 2. The neutral core (deductive, and boring by design)
+
+**P1 (The epistemic character of physics).** Our best physical theories characterize their entities entirely by structural and relational predicates — mass, charge, spin, field values, symmetry groups, causal-dispositional roles.
+
+*Status:* Uncontested. Note carefully what P1 is not: it is a claim about *our theories*, not yet about *the entities*. S repeatedly slid from the first to the second without argument (Z's B3: one circular move performed eight times). The repair does not slide.
+
+**P2 (The ontological fork).** Either (a) concrete entities are exhaustively structural — to be concrete is nothing over and above standing in the physical relational structure — or (b) concrete entities have, in addition to structure, some non-structural intrinsic nature.
+
+*Status:* This is an exhaustive disjunction (given P1's reading of physics). Disjunct (a) is **ontic structural realism** (Ladyman, Ross; Tegmark's Mathematical Universe as a variant) — a serious, live, technically developed research program, not a straw man. **The repaired argument takes no side on P2.** It proceeds *conditionally* on disjunct (b) and says exactly this. Readers who accept (a) — OSR — are not the argument's audience, and the argument tells them precisely which premise to deny rather than pretending to have refuted them. This is what S's "Concrete Grounding principle" should have been (Z's B2: the principle was the conclusion in disguise; D's Issue 2/6 flagged the same defect, then D's own reconstruction re-committed it).
+
+---
+
+## Part 3. The abductive step (the heart, and much weaker than S's)
+
+**P3 (The single sample, conditional).** *If* concrete entities have intrinsic natures, then the only sample of an intrinsic nature we possess is whatever D1's seeming acquaintance reveals — the experiential character, schematized down to its categorical minimum.
+
+*Status:* Contested twice over. First, by the illusionist and representationalist denials of D1's second clause. Second, even granting acquaintance, by **Stoljar's ignorance hypothesis**: "the only intrinsic nature we know" does not mean "the only kind there is or could be" — our ignorance of matter's intrinsic side is *exactly what the Russellian expects*, and it cuts both ways: it no more supports experiential intrinsic natures than non-experiential ones. The repaired argument therefore *cannot* infer "intrinsic natures are experiential." It can only express a preference under a metric — P5. P3's premise is addressed to those who grant first-person acquaintance; the argument concedes this audience restriction openly (it is person-relative, not neutral — and says so).
+
+**P4 (The ignorance block).** Our lacking further samples of intrinsic natures does not entail that there are none, nor that the unknown ones resemble the known one.
+
+*Status:* Uncontested — and it is inserted precisely to *block* the invalid inference S made (Z's C4; the move from "only known" to "most parsimonious candidate" is not valid, only preferential). P4 is a governor on the argument's engine. S had no governor; that is why S crashed.
+
+**P5 (The metric, stated).** When forced to posit intrinsic natures, count *posited kinds of intrinsic nature*: prefer one kind known-by-sample (the experiential, schematized as proto-experiential per Part 4) over one kind unknown-by-sample (the quidditist's X), ceteris paribus.
+
+*Status:* This is **one reasonable metric among several**, and the repair says so (Z's B7: parsimony arguments that pick the metric after picking the winner prove nothing). Under other natural metrics the preference reverses or ties: by *counting fundamental categories*, the physicalist's one-category ontology beats a two-aspect view; by *counting unexplained facts*, panprotopsychism carries the combination debt (Part 5) while emergentism carries the emergence debt and the quidditist carries none. No claim is made that P5's metric is uniquely rational. The argument claims only: *if you weight posited-kind-count this way, here is your preference.* That is a much smaller claim than S's "elegance razor," and deliberately so.
+
+**P6 (Uniformity — flagged as the weak link).** Fundamental intrinsic natures are of one kind, or of few related kinds.
+
+*Status:* Contested, unsupported by anything in P1–P5, and motivated mostly by a taste for unity. **Without P6 the honest result is a tie** between panprotopsychism and neutral-monist quidditism (intrinsic natures of a kind we cannot characterize, neutral between mental and non-mental — Russell himself, in his more careful moods, and Feigl). The repair refuses to break the tie and refuses to hide it. S broke it silently; that was Z's A3/B6 (false uniqueness over a curated menu). D's Issue 7 demanded the alternatives be acknowledged; D's own reconstruction then re-suppressed them (its §6 concludes for panexperientialism outright). The repair does not.
+
+**C\* (The conclusion of the repaired argument).** If P2's disjunct (b) holds, and acquaintance (D1/P3) is veridical, and preferences under P5's metric are legitimate, and P6's uniformity is granted: then panprotopsychism is, *pro tempore*, the least speculative hypothesis about the fundamental intrinsic nature of the concrete world — tied with neutral monism absent P6, and hostage to the combination problem (Part 5), which is unsolved.
+
+*What C\* does not claim — and this is the whole point of the repair:* no necessity (nothing modal anywhere in D1–P6); no proof of physicalism's *impossibility*; no uniqueness; no E ⇒ C; no elimination of any rival by *deduction*; and no concealment of the fact that the argument's force is conditional on premises illusionists, OSR-structuralists, and ignorance-hypothesizers each have standing reasons to deny.
+
+---
+
+## Part 4. Defining proto-experience honestly (repairing Z's C8 / D's Issue 10)
+
+**Proto-experiential intrinsic nature** =df. an intrinsic nature of the *same categorical kind* as the nature apparently revealed in experience — the kind-of-kind, not the richness: what remains when the sample's determinate phenomenal character (color qualia, felt intensity, hedonic tone) is abstracted away, leaving only its categorial form (there being something it is like, at whatever vanishing grade).
+
+*Both horns disclosed, not chosen:*
+
+- **Strong-analogy horn:** if proto-experience is genuinely experience-like even in minimal form, then simple entities carry proto-feelings, and the combination problem (Part 5) becomes mandatory for *everything*, not just brains. Cost: apparent absurdity charges; explanatory debts multiply.
+- **Weak-analogy horn:** if proto-experience is so dilute that it is safe to attribute to electrons, then — as Z's A4 and D's Issue 10 both observed, and as Chalmers (2015) made precise — the hypothesis becomes empirically and metaphysically indistinguishable from the quidditism it was supposed to beat. The advantage over Candidate 2 evaporates.
+
+**The repair does not pretend to have chosen a horn.** It states that the choice is the research program's central open problem, that no current consideration decides it, and that anyone claiming the position is *established* owes an answer here first. S hid this dilemma under an undefined term; D's Issue 10 located it and then D's proposed fix ("non-physical intrinsic ground") *re-labelled the rejected Candidate 2 as the winner*. The honest repair does neither: it defines, discloses, and leaves the dilemma standing.
+
+---
+
+## Part 5. The standing debts (what the program owes, itemized)
+
+A research program that cannot yet pay its debts should at least present the invoice. None of these appear in S; all are canonical (Z's C1–C12; D misses them entirely).
+
+**5.1 The combination problem.** How do proto-experiential facts pertaining to micro-constituents compose into the unified, structured experience we actually enjoy? Candidate strategies, honestly graded:
+- (a) *Structural-correlation constraints* (Chalmers): the phenomenal structure mirrors the physical structure of certain systems; composition is forced wherever the mirroring holds. Status: promissory — the constraint is stated, not derived, and its arbitrariness is the old problem in new dress.
+- (b) *Phenomenal bonding* (Goff): experiential natures relate by a primitive bond that is itself experiential. Status: risks re-adding structure to the intrinsic — Z's A9's second conception, smuggled back in.
+- (c) *Constitution without composition*: macro-experience is constituted by, but not composed of, micro-experience, via a mereology of natures. Status: undeveloped; this is where the program most needs new work.
+**Status of 5.1 overall: unsolved.** No strategy currently commands assent even within the camp.
+
+**5.2 The decombination problem.** Why is subjecthood cleanly bounded at organisms? Why are you not partly aware of the table you lean on? Same status: unsolved; the boundary conditions of "subjects of" are undefined.
+
+**5.3 Extrapolation discipline.** The argument spreads only the *categorical kind* of the sampled nature — not intelligence, agency, intentionality, or valuation. Why does the spread stop there? The repair's answer: because the sample-based schematization (Part 4) retains only the categorical minimum, and richer properties have no basis in the sample *as schematized*. **Disclosed weakness:** this answer is only as good as the schematization, and the schematization is exactly what neither horn of Part 4 secures. The stopping point is soft, and it is admitted to be soft.
+
+**5.4 Mental causation (the quietism cost).** Under the dual-aspect reading the argument naturally favors, the phenomenal *as such* does no causal work over and above the structural aspect; the causal story is the structural one. This is epiphenomenalism about the phenomenal-as-such, relabeled — Z's A6. The repair does not disguise this as a discovery (S's "causal symmetry" rhetoric); it books it as a *cost*, notes that everyday attributions ("the pain made you wince") are then read at the structural level, and accepts that some will find the cost fatal. It is a cost the program carries, not a virtue it advertises.
+
+**5.5 Empirical content.** What observation would discriminate panprotopsychism from OSR-plus-emergentism? Honest answer: none directly, today. Indirectly, the structural side is disciplined by consciousness science (whatever intrinsic natures there are must be consistent with the neural-correlate structure that any completed theory of consciousness will fix). The program is currently *underdetermined by the evidence*, and the repair says so rather than borrowing authority from physics' symmetries the way S's Part 2 did (Z's B10, B11; D's Issue 8 — the anthropomorphic "self-actuating vacuum").
+
+---
+
+## Part 6. What would count against the program
+
+A program that forbids nothing learns nothing. The repaired argument concedes its own falsification routes:
+
+1. A completed structural-dynamical account of the neural correlates of consciousness, together with a demonstration that first-person data are exhausted by the structural story, would dissolve D1/P3's motivation — the illusionist/structuralist endgame.
+2. Continued progress in OSR's program (quantum structure, derivation of "object talk" from relation talk) would make disjunct (a) of P2 increasingly comfortable, removing the argument's conditional footing.
+3. Sustained failure on combination (Part 5.1) — say, a century of impossible progress — would make the proto-experiential posit degenerate by Lakatosian standards.
+4. A rigorous demonstration that acquaintance does not deliver even *seeming* non-structural access (a completed science of introspection) would empty the sample.
+
+Conversely, the program's confirmations would be: any principled solution to 5.1 that predicts the *distribution* of experience-bearing systems; any theoretical constraint from physics side that turns out to require non-structural relata; any progress on 5.2's boundary conditions.
+
+---
+
+## Part 7. Self-audit against both audits
+
+Every finding in Z and D, and how the repair handles it. Three handling modes: **REPAIRED** (defect removed), **DEMOTED** (the move is dropped rather than fixed), **DISCLOSED** (the cost is kept but flagged, no longer hidden).
+
+| Finding | Mode | How |
+|---|---|---|
+| Z A1 / D I3: smuggled consciousness premise | DISCLOSED | D1 states it openly; no pretense of derivation from non-experiential premises |
+| Z A2 / D I9: modality whiplash | REPAIRED | No modal claim anywhere; status labels throughout |
+| Z A3: double standard Candidates 2/3 | REPAIRED | C\* ends in an admitted tie with neutral monism absent P6 |
+| Z A4 / D I10: conclusion downgrade; undefined Proto | REPAIRED + DISCLOSED | No E⇒C claimed; Part 4 defines proto with both horns on the table |
+| Z A5 / D I5-sub: three materialisms conflated | REPAIRED | "Strict materialism" eliminated; rivals named precisely (identity, OSR, illusionism, emergentism) |
+| Z A6: self-condemning causal structure | DISCLOSED | Part 5.4 books epiphenomenalism-as-cost |
+| Z A7 / D I5: symmetry equivocation | DEMOTED | Symmetry not used as a premise at all; dropped, not repaired |
+| Z A8: formalization drops half the argument | REPAIRED | Contains only what it uses; dropped constraints (self-interpretation, PSR/power, cosmological) listed as not reconstructible without B8/B9/B10 errors |
+| Z A9: two conceptions of experience | REPAIRED | Only the acquaintance/sample conception used; self-interpretation conception abandoned (B9's counterexamples stand) |
+| Z B1 / D I1: vacuous "deductive refutation" | DEMOTED | Negative argument not reconstructed; replaced by the open P2 fork |
+| Z B2 / D I2: Principle A = conclusion in disguise | REPAIRED | P2 is an honest fork; OSR named as live |
+| Z B3: circular anti-structuralism ×8 | REPAIRED | Conditionality makes the circularity explicit; no persuasion of OSR claimed |
+| Z B4: "account for" = a priori entailment | REPAIRED | No such demand made |
+| Z B5: equivocation on Exp | REPAIRED | Single sample-based use, definitionally disciplined |
+| Z B6: false trichotomy | REPAIRED | Neutral monism tied; idealism, identity, OSR, illusionism mapped |
+| Z B7 / D I4: parsimony misapplied | DISCLOSED | Metric stated (P5); reversal under rival metrics admitted |
+| Z B8: intrinsic power re-brands brute facts | DEMOTED | Constraint 4 dropped |
+| Z B9: self-interpretation special pleading | DEMOTED | Constraint 3 dropped |
+| Z B10 / D I8: physics errors | DEMOTED | Cosmological argument dropped entirely |
+| Z B11 / D I9: IBE bridge unargued | REPAIRED | Preference under stated metric; truth-conduciveness unclaimed |
+| Z C1/C2: combination, decombination | DISCLOSED | Part 5.1–5.2: unsolved, strategies graded |
+| Z C3: illusionism unengaged | REPAIRED | Named as denying D1's reading; told which premise to deny |
+| Z C4: ignorance hypothesis | REPAIRED | P4 blocks the inference explicitly |
+| Z C5/C6: OSR, MUH unengaged | REPAIRED | P2's disjunct (a); MUH noted as variant |
+| Z C7: identity physicalism missing | REPAIRED | In the map; its causal symmetry acknowledged |
+| Z C9: no empirical content | DISCLOSED | Part 5.5 + Part 6 falsification routes |
+| Z C10: extrapolation | DISCLOSED | Part 5.3, softness admitted |
+| Z C11: uncredited literature | REPAIRED | Russell 1927, Eddington 1928, Feigl, Chalmers 2015, Goff, Frankish, Dennett, Stoljar, Ladyman & Ross, James credited |
+| Z C12: acquaintance undefended | DISCLOSED | P3 flagged; audience-restriction conceded |
+| D I1b: modal □ confusion | DEMOTED | No □ anywhere |
+
+**Score: 19 REPAIRED, 7 DEMOTED, 6 DISCLOSED. Nothing is hidden.**
+
+---
+
+## Part 8. Verdict of the salvage test
+
+The position is salvageable **as a conditional, debt-carrying research program** — Russellian panprotopsychism with the debts itemized and the rivals tied. It is not salvageable **as what S claimed to be**: a proof, from consciousness-free constraints, that physicalism is impossible and existence entails consciousness. Every drop of that excess content is precisely what the audit findings located, and removing it is the price of soundness.
+
+The dialectical situation after repair is symmetrical and honest: the OSR-structuralist denies P2(b); the illusionist denies D1's veridicality; the ignorance-hypothesizer blocks P3→C\*'s force; the quidditist waits at the tie; the identity physicalist was never the target. To each, the repaired argument says: *here is the premise you deny; the rest does not touch you.* That is what an argument looks like when it has nothing up its sleeves.
+
+The final honest sentence, which S could never have written: **this argument should change no one's mind; it should only clarify what those who accept it have bought — a sample, a metric, a tie, and an unpaid invoice marked "combination."**
