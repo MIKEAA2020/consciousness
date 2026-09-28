@@ -1,0 +1,144 @@
+# Phase 0–1 of the Chu Bridge: The Cost-Dialectica Category
+
+**Status of this document.** This is the corpus's twenty-fourth document, and it is of a different kind: formal mathematics, executing the bridging file's Phase 0–1 roadmap (GPT's audit, §17) — *fix the formal target; build the enriched Chu construction over the cost monoid* — as far as it goes honestly. It was ordered conditionally ("as a formal document only if the math has not been pushed already"); the corpus's two prior Chu documents (docs 12 and 20) are critical assessments of the bridging file's claims, not constructions, so the condition is met and this document supplies the mathematics. **Method labels, used throughout and enforced: [Established] = standard result, cited; [Derived here] = proved in this document, complete proof or proof with all obligations explicit; [Conjecture] = precisely stated, unproved; [Sketch] = construction indicated, proof deferred with obligations listed; [Analogy] = structural correspondence, explicitly not a theorem; [Interpretation] = philosophical reading, carrying no mathematical weight. Per the Bridge Constraint (docs 11, 12, 20): no phenomenal vocabulary appears in any definition, theorem, or proof; where the bridging file would have said "consciousness," this document says nothing, and that silence is a result, not an omission.**
+
+**The headline results, for readers of the corpus who will not walk the proofs.** Phase 0 rejects the literal reading of "Chu over a cost monoid" (the quantale-as-base-category construction degenerates to a preorder — Lemma 1) and fixes the well-typed target: bipartite cost-valued pairings with lax morphisms, a quantale-valued Dialectica category here named **ChuCost**. Phase 1 proves it is a category with a Dialectica tensor (Props 2, 5), and then delivers three findings the bridging file did not anticipate. **First, a duality trichotomy (Props 3, 4): the equality-condition core is self-dual (Barr); the lax cost-order is *not* self-dual — transposition swaps lax for co-lax, so the outer/inner symmetry is exactly what the cost valuation breaks — and self-duality is restored, involutively, precisely when the cost scale is bounded and negation is reflection within the bound (r ↦ K − r on [0, K]), a continuum shadow of Abramsky's finite-value reductions. Second, a closure dichotomy (Theorem 8): the canonical internal-hom candidate fails in general, and the failure is exact — the adjunction holds if and only if the antecedent object's observer-pairing is identically zero; the category has function objects exactly where the observer is already omniscient; where information has a price, there are no function objects. Third, the Paper-3 resonance, filed as [Analogy] with its homework listed: a proven right-adjoint failure inside a self-dual cost-bearing category is the first structural rhyme with the no-right-adjoint theorem the bridging file wanted to identify — the identification remains unmade, and this document is the instrument that keeps it honest.**
+
+---
+
+## Part 0. Phase 0 — fixing the formal target
+
+### 0.1 The cost monoid [Established]
+
+Let V = ([0, ∞], +, 0, ≤): the extended non-negative reals with addition. V is a commutative quantale — a complete lattice with an associative, commutative, unital monoid operation distributing over arbitrary joins — and therefore a symmetric monoidal closed poset: the internal hom (residuum) is a → b := sup{c : a + c ≤ b} = max(b − a, 0), with ∞ − a := ∞. Inverses do not exist (a + c = 0 forces a = c = 0); this one fact will drive half the results below. The intended reading, deferred to Part 3 but fixed now so the definitions are not vacuous: a cost pairing r(a, x) is what it costs observer-state x to resolve system-state a — with surprisal −log s(u) as the canonical instance, additive under independent composition, ∞ at impossibility. The asymmetry of KL divergence, which the GPT audit correctly flagged as an obstruction to naive enrichment, is not an obstruction here: the pairing r is *directed* by design (system side queried by observer side), and nothing in the construction requires it to be symmetrized. The multiplicative dual ([1, ∞], ×, 1) is exp/log-monoidal-order-isomorphic to V, with matching residua (e^{max(b−a,0)} = max(e^b/e^a, 1)); the two are the same category in different bookkeeping, and the choice between them is notational (Remark 9).
+
+### 0.2 Two readings of "Chu over a cost monoid," and the rejection of the first
+
+**Reading A (thin).** Take the quantale V itself as the base symmetric monoidal closed category and form Barr's Chu(V, K) for some cost value K.
+
+**Lemma 1 (degeneracy of the thin reading) [Derived here].** V, regarded as a category, is a poset (each hom-set has at most one element). Hence for any K, Chu(V, K) is a preorder: its hom-sets are subsingletons, since a morphism is a pair of V-morphisms (inequalities) satisfying a condition, and there is at most one such pair. Moreover an object of Chu(V, K) is a triple of scalars (a, x, r) with r realized iff a + x relates to K by the appropriate inequality — a pair of numbers carrying one bit.
+
+*Proof.* The objects of Chu(C, K) for C = V are (A, X, r: A ⊗ X → K) with A, X ∈ ob(V) = [0, ∞] and r a morphism of V, i.e. the statement a + x ⊒ K in V's order; a morphism (f, g): (A, X, r) → (B, Y, s) is a pair f: A → B, g: Y → X of V-morphisms (inequalities A ≥ B, X ≤ Y or their converses per variance convention) with the Chu condition; thinness of V makes each of f, g unique when it exists, so hom-sets are empty or singleton. ∎
+
+A preorder of scalar pairs cannot carry a system/observer distinction, an interaction, or a dynamics; Reading A is rejected. This is the first honest output of Phase 0: **the phrase "Chu space over a cost monoid," taken literally, names a trivial object; the cost must live in the valuation, not the base.**
+
+**Reading B (bipartite; adopted).** Keep Set as the underlying category and put the cost in the pairing: objects are triples (A, X, r) with A, X sets and r: A × X → [0, ∞] an arbitrary function; the observer side is not a number but a *space*, and the pairing is a V-valued relation. This is the quantale-valued Dialectica/Chu construction — the shape GPT's audit asked for ("a V-valued Chu object (A, X, r: A ⊗ X → V) or the precise enriched analogue"), with Set rather than V as the ambient category, which Lemma 1 shows is forced.
+
+### 0.3 The duality budget, stated in advance
+
+Because inverses do not exist in V, every construction that would normally use a negation must instead spend one of three resources: **equality** (ignore the order), **boundedness** (cap the scale and reflect within it), or **enrichment** (let homs carry cost). Phase 1's results are exactly the audit of which constructions pay which price.
+
+---
+
+## Part 1. Phase 1 — the construction
+
+### 1.1 The category
+
+**Definition 1 (ChuCost) [Derived here].** An object is a triple (A, X, r) with A, X sets and r: A × X → [0, ∞]. A morphism (f, g): (A, X, r) → (B, Y, s) is a pair of functions f: A → B (forward on the system side) and g: Y → X (backward on the observer side) such that
+
+  s(f(a), y) ≤ r(a, g(y))  for all a ∈ A, y ∈ Y.   (L)
+
+Reading: *the cost of the transformed system under any test is at most the cost of the original system under the pulled-back test* — processes do not increase resolving cost along the pair of views. (The co-lax condition, r(a, g(y)) ≤ s(f(a), y), defines a different category ChuCost^≥; the two are related by Prop 3 below and neither is privileged here.)
+
+**Proposition 2 [Derived here].** ChuCost is a category.
+
+*Proof.* Identity: (id, id) satisfies (L) by reflexivity of ≤. Composition: given (f, g): (A, X, r) → (B, Y, s) and (f′, g′): (B, Y, s) → (C, Z, t), the composite is (f′∘f, g∘g′): (A, X, r) → (C, Z, t), and for all a, z: t(f′(f(a)), z) ≤ s(f(a), g′(z)) by (L) for (f′, g′) instantiated at b := f(a); and s(f(a), g′(z)) ≤ r(a, g(g′(z))) by (L) for (f, g) instantiated at y := g′(z); transitivity of ≤ gives t(f′f(a), z) ≤ r(a, g(g′(z)). ∎
+
+**Remark (the profunctor anchor) [Sketch].** An object (A, X, r) is a V-profunctor between discrete V-categories; a morphism is a lax cell in the double category of V-profunctors; the collage construction (objects A ⊔ X, hom-costs r(a, x) from system to observer, ∞ across) embeds the picture into V-Cat = Lawvere metric spaces with a bipartition condition. Proof obligations: the functoriality of collage on the lax cells, and the precise bipartition condition recovering (L). The anchor is recorded because it connects ChuCost to known territory; nothing below depends on it.
+
+### 1.2 The duality trichotomy
+
+**Proposition 3 (the lax transpose swaps lax for co-lax) [Derived here].** Define T(A, X, r) := (X, A, r^⊤) with r^⊤(x, a) := r(a, x). For a morphism (f, g): (A, X, r) → (B, Y, s) in ChuCost, the pair (g, f) is a morphism T(B, Y, s) → T(A, X, r) in ChuCost^≥ (the co-lax category), and T is an involutive isomorphism ChuCost ≅ (ChuCost^≥)^op.
+
+*Proof.* Unpack: (g, f): (Y, B, s^⊤) → (X, A, r^⊤) in the co-lax sense requires r^⊤(g(y), a) ≤ s^⊤(y, f(a)), i.e. r(a, g(y)) ≤ s(f(a), y) — the reverse of (L). So (L)-morphisms transpose to co-lax morphisms, contravariantly; T∘T = Id on objects and morphisms is immediate. ∎
+
+**Consequence.** ChuCost is **not** self-dual: the outer/inner symmetry that the bridging file treated as the construction's centerpiece survives, on the lax cost-valued reading, only as a duality between the lax and co-lax categories. The equality-condition core — Chu(Set, [0, ∞] as a mere set), Barr's construction — is self-dual with the same transpose [Established]. **The cost order is precisely what the transposition spends: valuation is the price of symmetry.**
+
+**Proposition 4 (bounded reflection restores self-duality) [Derived here].** Fix K ∈ (0, ∞) and let ChuCost_{[0,K]} be the full subcategory of objects whose pairing takes values in [0, K]. Define the reflected negation r ↦ r̄ := K − r and the reflected transpose T_K(A, X, r) := (X, A, r̄^⊤), r̄^⊤(x, a) := K − r(a, x). Then T_K is an involutive isomorphism ChuCost_{[0,K]} ≅ ChuCost_{[0,K]}^op: the bounded lax category is self-dual.
+
+*Proof.* Let (f, g): (A, X, r) → (B, Y, s) satisfy (L): s(f(a), y) ≤ r(a, g(y)). The transposed pair (g, f): (Y, B, s̄^⊤) → (X, A, r̄^⊤) must satisfy (L): r̄^⊤(g(y), a) ≤ s̄^⊤(y, f(a)), i.e. K − r(a, g(y)) ≤ K − s(f(a), y), i.e. s(f(a), y) ≤ r(a, g(y)) — exactly the hypothesis. Involutivity: K − (K − r) = r. ∎
+
+**Reading of the trichotomy [Interpretation].** Self-duality is bought three ways: by blindness (equality — no order to break), by budget (bounded scale, reflection r ↦ K − r: query-cost and answer-margin trade against a fixed resource K), or not at all (the unbounded additive scale, where no order-reversing involutive negation exists: a ↦ K − a fails globally, and the residuum-based negations are degenerate — a → 0 ≡ 0, a → ∞ ≡ ∞). The bounded case is the continuum shadow of Abramsky's finite-value reductions (three values suffice for the symmetry groupoid): finiteness and boundedness are the same repair at different resolutions. It is also the first place the bridging file's program, executed honestly, modifies its own blueprint: *the Chu bridge over costs is self-dual only if the costs live in a bounded ledger.*
+
+### 1.3 The Dialectica tensor
+
+**Definition 5 (tensor) [Derived here].** (A, X, r) ⊗ (B, Y, s) := (A × B, X^B × Y^A, t) with t((a, b), (φ, ψ)) := r(a, φ(b)) + s(b, ψ(a)), where X^B denotes the set of functions B → X. The unit is I := (1, 1, 0), the singleton pairing with cost 0.
+
+**Proposition 5 (monoidal) [Derived here].** ⊗ is a functor ChuCost × ChuCost → ChuCost, and (ChuCost, ⊗, I) is monoidal.
+
+*Proof (functoriality; the interesting part).* Given (f, g): (A, X, r) → (B, Y, s) and (f′, g′): (C, Z, u) → (D, W, v), define the induced morphism on tensors: forward f × f′: A × C → B × D; backward (φ, ψ) ↦ (φ′, ψ′) with φ′(c) := g(φ(f′(c))) and ψ′(a) := g′(ψ(f(a))). The tensor-condition to verify is
+
+  t′((f(a), f′(c)), (φ, ψ)) ≤ t((a, c), (φ′, ψ′)),
+  i.e. s(f(a), φ(f′(c))) + v(f′(c), ψ(f(a))) ≤ r(a, g(φ(f′(c)))) + u(c, g′(ψ(f(a)))).
+
+By (L) for (f, g) at y := φ(f′(c)): s(f(a), φ(f′(c))) ≤ r(a, g(φ(f′(c)))). By (L) for (f′, g′) at w := ψ(f(a)): v(f′(c), ψ(f(a))) ≤ u(c, g′(ψ(f(a)))). Add the two inequalities (monotonicity of +). ∎
+
+Associativity and unit isomorphisms are the canonical set-bijections ((A×B)×C ≅ A×(B×C); (X^B × Y^A)^C ≅ X^{B×C} × (Y^C × Z^B)^A etc.) together with associativity, commutativity and unitality of + on values; the pentagon and triangle diagrams commute because the underlying bijections do and the cost identities hold identically. These checks are routine and are the one place this document delegates to "standard verification" without exhibiting the diagrams — flagged as such. ∎ (partial; obligations stated)
+
+### 1.4 The closure dichotomy
+
+The internal-hom question is where the bridging file's program meets Paper 3's ghost, and it is answered exactly.
+
+**Definition 6 (the canonical candidate) [Derived here].** Given the tensor and any transpose-like duality, the canonical candidate for an internal hom is A ⊸ B := (A ⊗ B^⊥)^⊥ in whatever sense of ⊥ is available. Directly: with B^⊥ := (Y, B, s^⊤) (the plain transpose; the choice interacts with Prop 3 only through bookkeeping and the closure statements below are made within the lax category with the candidate spelled out),
+
+  H_{A,B} := (X^Y × B^A, A × Y, h),  h((φ, β), (a, y)) := r(a, φ(y)) + s(β(a), y).
+
+**Theorem 8 (closure dichotomy) [Derived here].** Fix objects A = (A, X, r) and B = (B, Y, s), and write C = (C, Z, u).
+
+(i) *(Currying on data.)* There is a canonical bijection between pairs of functions (forward C × A → B, backward data Y → Z^A × X^C) and pairs (C → X^Y × B^A, A × Y → Z), under which the ChuCost-morphism condition for C ⊗ A → B reads
+
+  s(F(c, a), y) ≤ u(c, G_Z(y)(a)) + r(a, G_X(y)(c))   (LHS)
+
+and the ChuCost-morphism condition for C → H_{A,B} reads
+
+  r(a, φ_c(y)) + s(β_c(a), y) ≤ u(c, Q(a, y)).   (RHS)
+
+(ii) *(One-way inclusion.)* RHS implies LHS (since r ≥ 0). Hence every morphism C → H_{A,B} uncurries to a morphism C ⊗ A → B, and the uncurrying is injective; the adjunction Hom(C ⊗ A, B) ≅ Hom(C, H_{A,B}) holds iff LHS and RHS are equivalent conditions for all C.
+
+(iii) *(The dichotomy.)* If r ≡ 0, then LHS and RHS each reduce to s(−, −) ≤ u(−, −), the conditions coincide for every C, and the adjunction holds naturally, with H_{A,B} the internal hom. If r ≢ 0, the conditions differ for suitable C, B: taking C = ({c}, {z}, u ≡ 0), B = (1, 1, s ≡ 0), every function-pair satisfies LHS (both sides are 0 ≤ r(a, x₀)) while RHS requires r(a, φ_c(y)) = 0 — so some morphisms C ⊗ A → B do not curry to morphisms C → H_{A,B}, and the candidate fails. The failure is a *surplus*: the functor C ↦ Hom(C ⊗ A, B) is strictly larger than C ↦ Hom(C, H_{A,B}).
+
+*Proof.* (i) is the currying bijection, checked pointwise: F ↔ β (F(c, a) = β_c(a)), G_X ↔ φ (G_X(y)(c) = φ_c(y)), G_Z ↔ Q (G_Z(y)(a) = Q(a, y)); the two displayed conditions are then substitutions. (ii): RHS ⟹ s ≤ u ≤ u + r = LHS. (iii): the r ≡ 0 case is the coincidence s ≤ u both ways; the r ≢ 0 case is the displayed witnesses, with the tensor C ⊗ A existing (its pairing at the unique system pair is u + r = r(a₀, x₀) > 0) and the LHS condition 0 ≤ u(c, G_Z(y)(a)) + r(a, G_X(y)(c)) holding for all backward data. ∎
+
+**Corollary 9 (the slogan) [Derived here].** ChuCost is monoidal closed precisely on the subcategory of omnisciently-paired antecedents — objects whose observer-pairing is identically zero, i.e. whose every query is costless, i.e. whose observer side is already perfectly informed about the system side. **Where information has a price, there are no function objects: the price of information is the price of closure.**
+
+**Remark 10 (the Paper-3 resonance) [Analogy].** Theorem 8 is a proven failure of a canonical right adjoint in a cost-bearing setting with a duality structure; Paper 3's no-right-adjoint theorem (per the bridging file's account: an affine-dimension obstruction for a channel-category adjunction) is another proven such failure. The resonance is real but is *not* an identification: the functors differ, the categories differ, and no construction of either from the other exists. The identification, if it exists, is Phase 6 work with a precise obligation: exhibit the channel-category functor whose missing right adjoint *is* the ChuCost closure failure of Theorem 8, or prove none exists. Until then the bridging file's Theorem C remains what GPT's audit called it — a conjecture — now with a worked example of the shape its obstruction would have to take.
+
+**Remark 11 (the enrichment repair) [Conjecture].** The residuum can pay the closure debt: since LHS is s ≤ u + r, one may define a V-enriched hom-cost between candidate morphism data and ask for a V-enriched adjunction — an isomorphism in V rather than of sets, with the deficit u → (r + s) measuring how far a curried pair is from being a morphism. Precise statement: ChuCost is naturally V-enriched (Hom-costs via the pointwise residuum of the two conditions), and the enriched adjunction Hom(C ⊗ A, B) ≅ Hom(C, A ⊸ B) holds in V-enriched form for a V-internal-hom object to be constructed. Unproved; listed as Phase 1.5's first obligation. This is also the mathematically honest descendant of the bridging file's "KL divergence as valuation" demand: the asymmetry the audit flagged is exactly what the enriched hom would carry.
+
+### 1.5 The equality core [Established]
+
+The subcategory of ChuCost on all objects with *equality* morphism conditions (s(f(a), y) = r(a, g(y))) is Barr's Chu(Set, [0, ∞]), ignoring the order; it is \*-autonomous, self-dual under the plain transpose, and contains the lax category's hom-sets as sub-sets. Everything the bridging file wanted from "the Chu construction" is true *here* — and none of it uses the cost structure. The cost enters exactly at the three places this document has priced: laxity (breaking self-duality, Prop 3), boundedness (buying it back, Prop 4), and closure (failing it, Thm 8).
+
+---
+
+## Part 2. What Phase 1 buys, and what it does not
+
+**What is now theorem-grade.** A well-typed cost-valued Dialectica category exists, with proofs: it is monoidal (Prop 5); its duality has a three-way budget (Props 3–4); its closure fails exactly and only at positive information cost (Thm 8). These are small theorems, but they are *real* — the first objects in the bridging program that are proved rather than asserted, and they already discipline the program's rhetoric: the self-duality that was to carry "outer and inner views of one reality" is not free on the cost-valued reading; it is bought by boundedness or by blindness, and the buyer should say which.
+
+**What remains [Sketch/Conjecture], with obligations.** The instantiation: A = histories I\*, X = predictive states, r(u, s) = −log s(u) (surprisal lands in [0, ∞] and composes additively — the pairing is exactly of the form Definition 1 demands); the fiber/transport structure of Paper 1 as a family of ChuCost objects over the causal poset; the right congruences of Paper 2 as collages or subobjects. Each is a Phase 2–3 obligation per the GPT roadmap: formalize the information model and the channel model *independently*, then construct comparison functors, then — only then — ask whether the obstruction corresponds (Phase 6). Nothing in this document brings those steps closer to done; it makes them startable, because the target category now exists and its two failure theorems tell the comparison functors what to look for.
+
+**The Bridge Constraint, enforced.** The trichotomy and the dichotomy are structural facts about valuation, symmetry, and function spaces. No reading of them introduces experience, subjectivity, or any phenomenal vocabulary; the inner pole of ChuCost's duality is an observer *side* (a set with a cost profile), not an observer *in any felt sense* — the gap between self-reference and self-experience, which doc 12 located as invariant across formalisms, is invariant here too, and the closure failure does not narrow it. If a future phase wants the pairing to be more than cost, it must say so as a premise; the mathematics will not say it for them.
+
+---
+
+## Part 3. Status table
+
+| Claim | Status | Label |
+|---|---|---|
+| V = ([0,∞], +, 0) is a commutative quantale, closed, complete | Standard | [Established] |
+| Chu(V, K) (quantale as base) is a preorder; scalar-pair objects | Proved, Lemma 1 | [Derived here] |
+| ChuCost (bipartite, lax) is a category | Proved, Prop 2 | [Derived here] |
+| Plain transpose swaps lax/co-lax; lax ≠ self-dual | Proved, Prop 3 | [Derived here] |
+| Bounded scale + reflection r ↦ K−r is involutive self-duality | Proved, Prop 4 | [Derived here] |
+| Dialectica tensor is monoidal | Functoriality proved; coherence diagrams delegated with obligations | [Derived here, partial] |
+| Closure iff antecedent pairing ≡ 0; strict failure witnesses | Proved, Thm 8 + Cor 9 | [Derived here] |
+| Surprisal pairing instantiates Definition 1 | Construction indicated | [Sketch] |
+| V-enriched adjunction repairs closure via the residuum | Statement fixed, unproved | [Conjecture] |
+| Paper 3's no-right-adjoint = ChuCost closure failure | Not constructed; shape exhibited | [Analogy] |
+| Any phenomenal reading of the duality/pairing | Forbidden by the Bridge Constraint; not attempted | [Interpretation: none] |
+
+---
+
+## Part 4. Coda
+
+The bridging file asked for a bridge on which physics and computation are two views of one thing, and its auditors demanded the mathematics be built before the metaphysics is cashed. Phase 0–1, executed here, yields a bridge of a different shape than the file drew: self-dual at its equality core, non-self-dual where costs are real, self-dual again under a budget, and closed — equipped with function objects — only where the observer is already omniscient. A bridge whose function spaces fail exactly at the price of information is not the neutral-monist triumph the file projected. It is something better: a proved object with failure theorems precise enough to be tested against the papers it was meant to unify. The next phase, if ordered, is Phase 1.5 (the enriched adjunction) and Phase 2 (the information model, independently) — and the corpus's standing rule applies to this document as to every other: the mathematics above is exactly as strong as its proofs, and no stronger.
