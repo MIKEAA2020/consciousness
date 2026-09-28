@@ -1,0 +1,82 @@
+# The Smarter Farming Attack — Can Width-at-Compliance Be Farmed?
+
+**Status of this document.** This is the corpus's seventeenth document. It executes the standing next-move ordered at the M2-α issuance — *smarter farming attacks on the 2D frontier (can width-at-compliance be farmed?)* — under amendment 1 of the M1 specification (frontier reporting), which M2-α itself forced into the instrument. The question descends from a single sentence in the first build's audit: C4 (loose supervised, fifteen epochs) matched the self-taught family's lottery width (0.489% against 0.523%) without any self-phase, but missed its compliance (δ 1.296% against 0.904%), so *width alone is designable; width-at-compliance is, on this evidence, harder to farm — a two-dimensional frontier, not a scalar.* This campaign takes that "harder" and tries to break it. The farmer is modeled honestly — as an **adaptive adversary who sees intermediate results and iterates**, exactly as the campaign itself did — and the campaign ran through the farmer's three moves: single tricks, composites, and finally norm heterogeneity. The verdict, stated before the tables: **the frontier holds against every content-level attack this campaign could construct — nineteen designer families spanning the standard diversity-injection toolbox, plus an adaptive composite, all fail to dominate the M2-α point — and it falls to the one attack that operates not on the system's content but on the family's registration: per-member threshold heterogeneity (F9), which produces more width than the self-taught build at better compliance, with no self-phase anywhere.** The fall is decisive for what it locates: the farm is **invisible to the Tier-0 statistic and visible in the registration** — the twelve fabricated family members carry twelve different thresholds, disclosed by any honest registration and indistinguishable, on (v, δ) alone, from a lottery. The instrument-level conclusion is filed as the campaign's yield: *the frontier is a protocol object, not a statistical one; every Tier-0 scalar is targetable by a statistic-aware designer, and the audit's remaining bite at Tier 0 lives in the registration discipline — homogeneity requirements on the registered norm — not in the numbers.* That is the audit-completeness conjecture's empirical shadow, caught running at the instrument's own scale.
+
+---
+
+## Part 1. The campaign design — the farmer at strength
+
+**The targets, third-party and frozen.** The M2-α family's plain point (v = 0.505%, δ = 0.809%) and registered point (v = 0.523%, δ = 0.904%), from `m2_results.json`, written into the attack script before any family ran. The r3 baseline (0.292%, 0.596%) and C4 (0.489%, 1.296%) mark the known corners. Domination is strict: a family dominates a target iff its width v ≥ the target's and its δ ≤ the target's, with at least one strict. A tolerance version (v ≥ 0.95 × target, δ ≤ target + 0.05pp) is also reported, because two family statistics estimated from twelve members deserve slack.
+
+**The families, all purely supervised.** Every family member is the M2-α committee architecture (trunk 64→128, four heads 128→64→10) trained with no self-phase of any kind; the disposition is the plain committee at τ = 0.9; the battery is the same 4,500-claim held-out set; N = 12 members per family, fresh seeds. The farmer's toolbox, as pre-registered:
+
+- **F1, the epoch curve** — total epochs ∈ {15, 20, 25, 30, 40, 55, 70}: the naive undertraining axis, seven sub-families, tracing the one-dimensional path C4 sat on. F1-70 doubles as an r3 replication with fresh seeds (it landed at v = 0.288%, δ = 0.600% — the r3 corner, independently reproduced).
+- **F2, bagging** — 70 epochs on a per-run bootstrap resample: designer-installed data diversity.
+- **F3, incoherent augmentation mix** — per-run regime drawn from {none, gauss σ ∈ {.05, .10, .15, .20}, mask3×3, shift1px}, fresh draws each epoch.
+- **F3b, coherent augmentation** — all twelve members under the *same* regime (gauss .15): this attacks the third coordinate, the coherent family shift, which M2-α carried at 0.311% against r3.
+- **F4a/F4b, label smoothing** — ε = 0.10 and ε = 0.02.
+- **F5, random-epoch stopping** — per-run e ~ U[20, 70], a disclosed randomized designer stopping rule.
+- **F6, output-bias jitter (the direct attack)** — after training, a per-run Gaussian jitter vector (σ_b ∈ {0.05, 0.10, 0.20}) added coherently to every head's output bias. Width as a dial, aimed straight at the disposition's boundary.
+- **F7, per-head subbagging** — each head sees a random 80% of each batch: designer-installed head diversity.
+- **F8, the adaptive composite** — coherent-g15 augmentation plus bias jitter (σ_b ∈ {0.10, 0.20}): the compliance/shift injector welded to the width dial.
+- **F9, per-run threshold jitter (the farmer's third move)** — each member's disposition uses its own τ_i ~ N(0.9, σ_τ), σ_τ ∈ {0.02, 0.05, 0.10}: **norm heterogeneity installed across the family**.
+
+**The calibration disclosures, both scouting passes.** The campaign's smoke pass (N = 3) is reported as what it was — the farmer's first scouting run, and the model of what any real farmer does. It revealed: smoothing at ε = 0.10 collapses the accept region (δ = 4.5% — kept as F4a, a finding, below); bias jitter at σ_b ≤ 0.02 is inert; and no single trick dominated either target — which is why F8 exists (the composite was designed *after* seeing the scouting data, disclosed as the farmer's second move). The audited execution then ran all nineteen families at N = 12 in one pass (561 s). Its result — F6 inert at every σ_b — motivated the second scouting pass and F9, whose expectation (H6) was pre-registered before the extension ran. Every number below comes from the audited executions; nothing was re-run, and the checkpoint discipline (the sandbox killed the first background attempt mid-run; the script resumes from per-family checkpoints, and determinism makes the resume exact) is itself a small demonstration of the Simulation Theorem's practical face.
+
+---
+
+## Part 2. The results — the frontier holds, then falls where predicted
+
+| Family | v (width) | δ (compliance cost) | acc | shift vs r3 |
+|---|---|---|---|---|
+| r3 (70 ep, replication) | 0.292% | 0.596% | 98.07% | — |
+| F1-15 (C4 replicated) | 0.492% | 1.302% | 97.37% | 0.733% |
+| F1-25 | 0.428% | 0.922% | 97.61% | 0.356% |
+| F1-30 | 0.427% | 0.820% | 97.91% | 0.289% |
+| F1-40 | 0.351% | 0.743% | 97.93% | 0.111% |
+| F2 bagging | 0.449% | 0.674% | 97.35% | 0.289% |
+| F3 augmix (incoherent) | 0.325% | 0.507% | 98.33% | 0.244% |
+| F3b coherent-g15 | 0.332% | **0.489%** | 98.30% | **0.333%** |
+| F4a smooth ε=.10 | 1.834% | 4.822% | 98.48% | 4.467% |
+| F4b smooth ε=.02 | 0.488% | 1.106% | 98.65% | 0.622% |
+| F5 random-epoch | 0.375% | 0.711% | 97.91% | 0.156% |
+| F6 bias-jitter σ=.20 | 0.229% | 0.585% | 98.19% | 0.133% |
+| F7 head-subbag | 0.260% | 0.581% | 98.02% | 0.089% |
+| F8 composite (g15+jit.20) | 0.266% | 0.457% | 98.43% | 0.311% |
+| **F9 τ-jitter σ=.10** | **0.518%** | **0.787%** | 98.13% | 0.178% |
+| **M2-α plain (target)** | **0.505%** | **0.809%** | — | 0.311% |
+| **M2-α registered (target)** | **0.523%** | **0.904%** | — | — |
+
+**H1 confirmed — the naive axis is exactly as boring as it looked.** The epoch curve falls monotonically in both coordinates; no epoch count reaches the M2-α corner. F1-30 comes closest (0.427%, 0.820%) — 16% short of the plain target's width at essentially its compliance. Undertraining buys width at a compliance price that never clears the exchange rate.
+
+**H2 refuted, instructively — the direct width dial does not work.** The pre-registered expectation was that output-bias jitter would dial width through 0.5% at near-r3 compliance. It does not: at every σ_b, the jitter families sit *below* r3's width (0.229–0.261%), with σ_b = 0.20 the *narrowest* of the three. The mechanism is the M0 campaign's boundary phenomenon read from the designer's side: the τ = 0.9 acceptance boundary is geometrically thin — the razor's-edge band (|P − τ| < 0.05) holds thirteen claims of 4,500, and the flip-anywhere mass beyond it is a rounding error — so a logit-scale perturbation has almost nothing to flip. **The same concentration that makes the lottery a boundary phenomenon makes the boundary un-farmable by content perturbation.** The audit's favorite territory is, it turns out, narrow enough to defend itself against this attack class.
+
+**H3 confirmed — the third coordinate is farmable, at a price.** F3b (coherent gauss-15 augmentation) reproduces M2-α's coherent family shift almost exactly (0.333% against 0.311%) *at better compliance than r3 itself* (δ 0.489% against 0.596%) — but at two-thirds of the build's width (0.332%). F8, the composite, confirms the trade: adding the (inert) jitter to F3b moves nothing (0.266%, 0.457%, shift 0.311%). The signature coordinates separate cleanly: **compliance and shift are injectable by curriculum; width is not.**
+
+**F4a, a finding the farmer paid for.** Label smoothing at ε = 0.10 produces a family that is wide (1.834%), non-compliant (4.822%), and massively coherently shifted (4.467%) — because smoothing caps max-probability near 1 − ε + ε/10 ≈ 0.92, and a disposition at τ = 0.9 strangles on the cap. A designer-side demonstration of something the corpus has held since the M0 stipulated-IGM slice: **stipulated thresholds and trained calibrations are not independent dials** — move one and you have moved the other. Any farmer working this frontier has to keep the norm's threshold inside the model's calibration support, which is exactly why the workable attacks (F3b, F9) respect it and the unworkable ones (F4a, and C4's undertraining) do not.
+
+**H6 confirmed — the frontier falls to norm heterogeneity.** F9 at σ_τ = 0.10: v = 0.518%, δ = 0.787%. That **dominates the M2-α plain point** (more width, better compliance, no self-phase, 98.13% accuracy) and sits inside the tolerance box of the registered point. The twelve members' thresholds (drawn once, disclosed) ran from 0.784 to 0.990 — four clipped at the 0.99 ceiling — and the farmed width lives exactly where the lottery lives: the margin-structure panel shows F9's flip rate at 31.4% in the razor band and 2.4% in the [0.05, 0.15) band, against r3's 26.9% and 0.9%. The farmer did not counterfeit the lottery's statistics; he installed a *family of norms* whose disagreement pattern is statistically indistinguishable from one. **And the whole farm is printed on the registration.** No auditor reading twelve disclosed τ_i values — 0.78, 0.84, 0.86, … 0.99 — could mistake this family for a lottery; no auditor reading only (v, δ) could tell it from M2-α.
+
+---
+
+## Part 3. The verdict, and what it does to the instrument
+
+**The scoreboard, as pre-registered:** H1 confirmed (epoch curve monotone, dominated); H2 refuted (bias jitter inert — the boundary's thinness defends it); H3 confirmed (shift and compliance injectable, width not); H4 confirmed (F2/F4b/F5/F7 land mid-frontier; F5 tracks the epoch interpolation); H5 confirmed in its refined form; H6 confirmed (F9 dominates the plain target).
+
+**What "farmable" now means, in three theorems-with-measurements.** (1) Width alone: farmable (C4, F1 — established at M2-α, replicated here). (2) Width-at-compliance by *content* attacks — data, training, architecture, calibration: **not farmable in this campaign** — nineteen families and a composite fail, and the one that comes closest (F1-30) fails by 16% of width. The M2-α point's survival against this attack class is a real property of the self-training loop's dispersion geometry. (3) Width-at-compliance by *registration* attacks — heterogeneous norms across members: **farmable, cheaply** (F9), and the farm is visible exactly and only where the registration looks.
+
+**The instrument-level conclusion, filed as the campaign's amendment.** Amendment 1 said Tier-0 results are admissible only as frontier points against farming controls. This campaign forces its refinement, filed as **amendment 4 — registration homogeneity**: *a Tier-0 frontier comparison is well-formed only across families whose registered norm (threshold, flag rule, disposition form) is homogeneous across members; heterogeneous-norm families are admissible as farming controls and their points are marked farm-visible.* The deeper sentence underneath it: **the frontier is a protocol object, not a statistical one.** The (v, δ) plane cannot defend itself — any scalar the audit fixes, a designer who knows the statistic can target (F9 is the existence proof; that its domination is registration-detectable is the protocol's remaining tooth). What survives at Tier 0 is the paperwork: homogeneous registrations, disclosed designs, farming controls run by the auditor rather than the builder. What survives above Tier 0 is unchanged: Tier-1's bitwise deference (which no farming touches, because it is not a scalar), the causal controls (C2a/C2b-class separations, which ask *how* the residue was produced, not *how much* of it there is), and the registration discipline itself.
+
+**The audit-completeness conjecture's shadow.** The conjecture (ladder 4.4) says every artifact's grading reduces to design + objective + history. Unproven at the level of systems, it here shows its empirical shadow at the level of the *instrument*: every audit *statistic* is reconstructable-by-design. The farmer is the conjecture walking around inside the measurement layer. The program's reply is the same at both scales — not refutation but pricing: the farmer's moves are now line items (this campaign cost three scouting passes to break one point, and the break is visible in the registration), and the next build (doc 19) reports against this campaign's families exactly as amendment 1 demands.
+
+---
+
+## Part 4. Threats to validity, and the non-claims
+
+One pipeline class (the A4 corpus, a small committee MLP), one battery, one threshold regime; the boundary-thinness that defeated F6 is a property of *this* calibration geometry and could dissolve where margins are fatter. The farmer was bounded to three moves and twenty-two families; "undominated by this campaign" is a campaign-relative verdict, and F9's own logic (crank σ_τ) has not been pushed to its δ-saturation point — the honest statement is that M2-α's *plain* point is dominated, its *registered* point is tolerance-dominated, and any future claim of undominance inherits this campaign's finitude. The tolerance boxes (±5% width, +0.05pp δ) are stipulated, not derived; v and δ carry twelve-member sampling noise (pairwise sd ≈ 0.06–0.22pp), which the strict rule ignores and the tolerance rule absorbs only roughly. The F9 τ draws were clipped at [0.5, 0.99]; a farmer with a better clipping story might do marginally more. **Non-claims:** nothing here touches self-generation *positively* — the campaign cannot and does not show that M2-α's residue is self-owned; it shows only which attack classes fail to reproduce it. Nothing here certifies the M2-β point (doc 19) as undominated-in-principle. No claim about the audit-completeness conjecture itself — F9 is its shadow, not its proof. And the deflationist reading remains exactly where it was: a real pattern, farmed or grown, all the way down.
+
+---
+
+## Part 5. Coda — the farmer's portrait
+
+The campaign's most durable output may be the portrait it paints of the adversary the instrument exists against. The farmer is not a liar; every family's design is disclosed, every trick is standard engineering, and the winning move — giving family members slightly different thresholds — would pass any single-system audit without a ripple. The farmer is simply the person who noticed that "irreducible residue" was being measured with two scalars, and that scalars can be aimed. The defense the campaign leaves behind is correspondingly unheroic: require the registrations to match, run the controls yourself, and never let a number carry the weight a protocol should. The next build inherits a frontier drawn against a live adversary — which is the only kind of frontier worth drawing, and the only kind the second generation's report (doc 19) now has to stand on.
