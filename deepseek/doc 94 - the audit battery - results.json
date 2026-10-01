@@ -1,0 +1,1590 @@
+{
+ "meta": {
+  "doc": "94",
+  "audit_of": "doc 93 (the quantum tribunal under the dual-lens protocol)",
+  "order": "audit doc 93 first. It's a major filing, and the corpus's own rules say audit the audit. Then P4. The chassis deployment is shadow-maintenance - useful, but not the main line.",
+  "method": "reproduction, arithmetic re-derivation, claim battery, contradiction checks, gift-scan, leave-one-out, N5-sensitivity conditional, pre-registration compliance - no stochastic compute; determinism count stands at 798",
+  "markers": "both markers up: the corpus's results are Russellian-shaped (position-grade) and the corpus's rankings are grammar-shaped (tribunal-grade); this audit's own grammar is claim-data consistency, filed under the same marker discipline"
+ },
+ "checks": [
+  {
+   "id": "R1",
+   "check": "reproduction: re-run of the filed instrument is byte-identical to the filed results.json",
+   "status": "PASS",
+   "evidence": {
+    "sha256_regen": "4924d5ab8d5716888a24",
+    "sha256_filed": "4924d5ab8d5716888a24",
+    "byte_identical": true
+   }
+  },
+  {
+   "id": "L0",
+   "check": "pipeline validation: the audit's own re-derivation pipeline (totals -> per-scorer tie-averaged ranks -> mean ranks -> battery order) reproduces the filed battery_order_rank identically",
+   "status": "PASS",
+   "evidence": {
+    "rederived": {
+     "grw": 1.0,
+     "bohm": 2.0,
+     "everett": 3.0,
+     "rqm": 4.0,
+     "histories": 5.0,
+     "qbism": 6.0,
+     "many-minds": 7.0,
+     "copenhagen": 8.0,
+     "wigner": 9.0
+    },
+    "filed": {
+     "grw": 1,
+     "bohm": 2,
+     "everett": 3,
+     "rqm": 4,
+     "histories": 5,
+     "qbism": 6,
+     "many-minds": 7,
+     "copenhagen": 8,
+     "wigner": 9
+    }
+   }
+  },
+  {
+   "id": "A1",
+   "check": "arithmetic re-derivation: every total, mean, range, rank, and spearman recomputed from the BATTERY registry matches the filed results.json (225/225 cells; 45 totals; 9+9+9+9 rank maps; 6 spearman statistics)",
+   "status": "PASS",
+   "evidence": {
+    "recomputed_identical": true,
+    "mismatches": {},
+    "spearman_overall": 0.533,
+    "spearman_by_scorer_recomputed": {
+     "6-a": 0.613,
+     "6-b": 0.458,
+     "6-c": 0.496,
+     "6-d": 0.533,
+     "6-e": 0.588
+    },
+    "spearman_convention": "the classical d-squared formula on tie-averaged ranks, the instrument's own convention, replicated; exact for the tie-free overall 0.533, approximate under ties for the per-scorer fields"
+   }
+  },
+  {
+   "id": "A2",
+   "check": "divergence classes: the five agreements, the one mild, the three inversions re-derived identically",
+   "status": "PASS",
+   "evidence": {
+    "rank_delta": {
+     "copenhagen": 1.0,
+     "wigner": 0.0,
+     "grw": -5.0,
+     "everett": 0.0,
+     "bohm": -2.0,
+     "qbism": 4.0,
+     "rqm": 3.0,
+     "histories": 0.0,
+     "many-minds": -1.0
+    },
+    "classes": {
+     "agree": [
+      "copenhagen",
+      "everett",
+      "histories",
+      "many-minds",
+      "wigner"
+     ],
+     "mild": [
+      "bohm"
+     ],
+     "inversion": [
+      "grw",
+      "qbism",
+      "rqm"
+     ]
+    }
+   }
+  },
+  {
+   "id": "C1",
+   "check": "claim: GRW scored 9,9,9,9,9 (persona range 0)",
+   "status": "PASS",
+   "evidence": {
+    "data": [
+     9,
+     9,
+     9,
+     9,
+     9
+    ],
+    "quoted": [
+     9,
+     9,
+     9,
+     9,
+     9
+    ],
+    "note": "the filed cells"
+   }
+  },
+  {
+   "id": "C2",
+   "check": "claim: Everett scored 10,6,6,7,8 (range 4, the field's widest)",
+   "status": "PASS",
+   "evidence": {
+    "data": [
+     10,
+     6,
+     6,
+     7,
+     8
+    ],
+    "quoted": [
+     10,
+     6,
+     6,
+     7,
+     8
+    ],
+    "note": "the filed cells"
+   }
+  },
+  {
+   "id": "C3",
+   "check": "claim: the Everettian's Everett N5 = 2 where the others scored 0,0,0,1",
+   "status": "PASS",
+   "evidence": {
+    "data": [
+     2,
+     0,
+     0,
+     0,
+     1
+    ],
+    "quoted": [
+     2,
+     0,
+     0,
+     0,
+     1
+    ],
+    "note": "the filed cells"
+   }
+  },
+  {
+   "id": "C4",
+   "check": "claim: the participatory's RQM N2 = 2 where the others scored 1",
+   "status": "PASS",
+   "evidence": {
+    "data": [
+     1,
+     1,
+     1,
+     1,
+     2
+    ],
+    "quoted": [
+     1,
+     1,
+     1,
+     1,
+     2
+    ],
+    "note": "the filed cells"
+   }
+  },
+  {
+   "id": "C5",
+   "check": "claim: N1 split: GRW 2,2,2,2,2",
+   "status": "PASS",
+   "evidence": {
+    "data": [
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "quoted": [
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "note": "the filed cells"
+   }
+  },
+  {
+   "id": "C6",
+   "check": "claim: N1 split: RQM 1,1,1,1,1",
+   "status": "PASS",
+   "evidence": {
+    "data": [
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "quoted": [
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "note": "the filed cells"
+   }
+  },
+  {
+   "id": "C7",
+   "check": "claim: N1 split: Bohm 2,2,2,2,2",
+   "status": "PASS",
+   "evidence": {
+    "data": [
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "quoted": [
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "note": "the filed cells"
+   }
+  },
+  {
+   "id": "C8",
+   "check": "claim: N1 split: QBism 1,1,1,1,1",
+   "status": "PASS",
+   "evidence": {
+    "data": [
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "quoted": [
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "note": "the filed cells"
+   }
+  },
+  {
+   "id": "C9",
+   "check": "claim: Everett N1 quoted 2-1-1-1-1",
+   "status": "PASS",
+   "evidence": {
+    "data": [
+     2,
+     1,
+     1,
+     1,
+     1
+    ],
+    "quoted": [
+     2,
+     1,
+     1,
+     1,
+     1
+    ],
+    "note": "the filed cells"
+   }
+  },
+  {
+   "id": "C10",
+   "check": "claim: Wigner N4 unanimous 0,0,0,0,0; no scorer above 4",
+   "status": "PASS",
+   "evidence": {
+    "data": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "quoted": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "note": "totals [4, 4, 3, 3, 4], max 4"
+   }
+  },
+  {
+   "id": "C11",
+   "check": "claim: Copenhagen N1 quoted 1,0,0,0,1",
+   "status": "PASS",
+   "evidence": {
+    "data": [
+     1,
+     0,
+     0,
+     0,
+     1
+    ],
+    "quoted": [
+     1,
+     0,
+     0,
+     0,
+     1
+    ],
+    "note": "the filed cells"
+   }
+  },
+  {
+   "id": "C12",
+   "check": "claim: many-minds N4 quoted (1,1,0,0,0)",
+   "status": "FLAG",
+   "evidence": {
+    "data": [
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    "quoted": [
+     1,
+     1,
+     0,
+     0,
+     0
+    ],
+    "note": "the doc's quoted row differs from the filed cells"
+   }
+  },
+  {
+   "id": "C13",
+   "check": "claim: many-minds N2 quoted (2,1,2,2,1)",
+   "status": "PASS",
+   "evidence": {
+    "data": [
+     2,
+     1,
+     2,
+     2,
+     1
+    ],
+    "quoted": [
+     2,
+     1,
+     2,
+     2,
+     1
+    ],
+    "note": "the filed cells"
+   }
+  },
+  {
+   "id": "C14",
+   "check": "claim: Everett N2 quoted 2-2-1-2-2 ('partial by one')",
+   "status": "FLAG",
+   "evidence": {
+    "data": [
+     2,
+     1,
+     1,
+     2,
+     2
+    ],
+    "quoted": [
+     2,
+     2,
+     1,
+     2,
+     2
+    ],
+    "note": "the doc's quoted row differs from the filed cells"
+   }
+  },
+  {
+   "id": "C15",
+   "check": "claim: Everett N3 and N4 unanimous 2s",
+   "status": "PASS",
+   "evidence": {
+    "data": [
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "quoted": [
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "note": "the filed cells"
+   }
+  },
+  {
+   "id": "C16",
+   "check": "claim: QBism N2 quoted 2-1-1-2-2",
+   "status": "PASS",
+   "evidence": {
+    "data": [
+     2,
+     1,
+     1,
+     2,
+     2
+    ],
+    "quoted": [
+     2,
+     1,
+     1,
+     2,
+     2
+    ],
+    "note": "the filed cells"
+   }
+  },
+  {
+   "id": "C17",
+   "check": "claim: RQM and QBism N5 unanimous 0s",
+   "status": "PASS",
+   "evidence": {
+    "data": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "quoted": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "note": "the filed cells"
+   }
+  },
+  {
+   "id": "C18",
+   "check": "the nine mean totals and nine mean ranks quoted in Part 3 match the data",
+   "status": "PASS",
+   "evidence": {
+    "mean_total": {
+     "copenhagen": 4.2,
+     "wigner": 3.6,
+     "grw": 9.0,
+     "everett": 7.4,
+     "bohm": 7.8,
+     "qbism": 5.6,
+     "rqm": 6.2,
+     "histories": 5.6,
+     "many-minds": 4.8
+    },
+    "mean_rank": {
+     "copenhagen": 7.8,
+     "wigner": 8.7,
+     "grw": 1.2,
+     "everett": 2.7,
+     "bohm": 2.4,
+     "qbism": 5.5,
+     "rqm": 4.3,
+     "histories": 5.4,
+     "many-minds": 7.0
+    }
+   }
+  },
+  {
+   "id": "D1",
+   "check": "contradiction: doc 93 Finding 1 'Rank one for all five' vs the instrument's own per_scorer_rank (GRW = 2.0 for 6-a)",
+   "status": "FLAG",
+   "evidence": {
+    "doc_sentence": "Finding 1: 'Persona range zero. Rank one for all five.' (and the results.json persona_invariance note: 'unanimous first for every scorer, every persona, rivals included')",
+    "filed_data": {
+     "grw_per_scorer_rank": {
+      "6-a": 2.0,
+      "6-b": 1.0,
+      "6-c": 1.0,
+      "6-d": 1.0,
+      "6-e": 1.0
+     },
+     "grw_mean_rank": 1.2,
+     "cause": "6-a's Everett total 10 outranks GRW's 9 in the Everettian's own table",
+     "totals_are_unanimous": true,
+     "rank_one_count": 4
+    },
+    "status": "FLAG - the totals are unanimous; the rank is not"
+   }
+  },
+  {
+   "id": "D3",
+   "check": "contradiction: doc 93 Part 4 'one grade off' vs the instrument's rank delta (bohm: 4th -> 2nd = -2)",
+   "status": "FLAG",
+   "evidence": {
+    "doc_sentence": "Part 4: 'Bohm is one grade off (4th/2nd...'",
+    "filed_data": {
+     "lens_a_rank": 4,
+     "battery_rank": 2.0,
+     "delta": -2.0,
+     "instrument_class": "mild_divergence_delta_2"
+    },
+    "status": "FLAG - the delta is two grades, filed as mild(2) by the instrument; the text says one"
+   }
+  },
+  {
+   "id": "D4",
+   "check": "marker placement: the reduction sentences assign GRW to the placement edge while its Lens A filing is FAILURE-as-bridge",
+   "status": "NOTE",
+   "evidence": {
+    "doc_sentence": "Part 2's reduction and Part 8's verdict.reduction list GRW's flashes on the state-as-world PLACEMENT edge",
+    "filed_data": {
+     "grw_lens_a_filing": "FAILURE as bridge (the collapse term bought as dynamical law) + the field's most serious measurement campaign - the one ",
+     "reduction_sentence": "the QM field, run through both lenses, collapses onto the corpus's own fork (C5): state-as-world (the residue placed at index / particle / flash / realm - Everett, Bohm, GRW, histories) vs state-as-re",
+     "disclosed_elsewhere": "Parts 4 and 6 file the straddle (the inversion; REFRAMED: failure as grammar-bridge, first-class as physics)"
+    },
+    "status": "NOTE - the re-shelving is disclosed in Parts 4/6 but the reduction sentences themselves carry no marker"
+   }
+  },
+  {
+   "id": "G1",
+   "check": "gift-scan: every aligned-persona cell above the unaligned max, compared against the two disclosed self-gifts",
+   "status": "FLAG",
+   "evidence": {
+    "differentials_found": 3,
+    "disclosed": 2,
+    "undisclosed": [
+     {
+      "scorer": "6-a",
+      "theory": "everett",
+      "criterion": "N1",
+      "score": 2,
+      "others": [
+       1,
+       1,
+       1,
+       1
+      ],
+      "disclosed": false
+     }
+    ]
+   }
+  },
+  {
+   "id": "L0b",
+   "check": "the full-battery classification under the LOO pipeline matches the filed classes (agree x5, mild x1, inversion x3)",
+   "status": "PASS",
+   "evidence": {
+    "full_classes": {
+     "copenhagen": "agree",
+     "wigner": "agree",
+     "grw": "inversion",
+     "everett": "agree",
+     "bohm": "mild",
+     "qbism": "inversion",
+     "rqm": "inversion",
+     "histories": "agree",
+     "many-minds": "agree"
+    }
+   }
+  },
+  {
+   "id": "L1",
+   "check": "leave-one-out: the divergence classification's class structure is stable under every single-scorer removal (the mild class dissolves under -6-b; the inversions and GRW's first place are invariant)",
+   "status": "PASS",
+   "evidence": {
+    "unstable_cells": [
+     {
+      "remove": "6-b",
+      "theory": "bohm",
+      "full_class": "mild",
+      "loo_class": "agree"
+     }
+    ],
+    "note": "the 2nd/3rd order (bohm/everett) flips under -6-b (everett 2.375 vs bohm 2.5 mean rank); top-3 membership invariant"
+   }
+  },
+  {
+   "id": "S1",
+   "check": "N5-sensitivity: with the criterion every scorer flagged as loading zeroed, GRW's first place survives, the family inversion is N5-invariant, and the top-3 internal margin tightens to a tie",
+   "status": "PASS",
+   "evidence": {
+    "marked_as": "A CONDITIONAL, NOT A RE-RANKING - the Camp-Marker governs the auditor; zeroing the criterion every scorer flagged is a sensitivity probe, and its output is which order facts the criterion carries, not a new order",
+    "mean_totals_with_N5_zeroed": {
+     "copenhagen": 4.2,
+     "wigner": 2.6,
+     "grw": 7.0,
+     "everett": 6.8,
+     "bohm": 6.8,
+     "qbism": 5.6,
+     "rqm": 6.2,
+     "histories": 5.6,
+     "many-minds": 4.6
+    },
+    "order_with_N5_zeroed": {
+     "grw": 1.0,
+     "everett": 2.5,
+     "bohm": 2.5,
+     "rqm": 4.0,
+     "qbism": 5.5,
+     "histories": 5.5,
+     "many-minds": 7.0,
+     "copenhagen": 8.0,
+     "wigner": 9.0
+    },
+    "surviving_facts": [
+     "GRW stays 1st (7.0 vs bohm/everett 6.8) - the unanimity carries the first place even with the flagged criterion removed, which strengthens the GRW correction beyond its own filing",
+     "the family's mid-field standing is N5-invariant (rqm 6.2, qbism 5.6 - their N5 is 0)",
+     "the bottom two are N5-invariant in class"
+    ],
+    "tightening_facts": [
+     "the 2nd/3rd margin collapses to a tie (bohm 6.8 = everett 6.8)",
+     "wigner falls 3.6 -> 2.6 (his only earned points were N1 and N3)"
+    ]
+   }
+  },
+  {
+   "id": "P1",
+   "check": "pre-registration compliance: both lenses on the same field: the same nine interpretations under Lens A and Lens B",
+   "status": "PASS",
+   "evidence": {
+    "evidence": "filed structure check"
+   }
+  },
+  {
+   "id": "P2",
+   "check": "pre-registration compliance: the divergence filed as part of the verdict",
+   "status": "PASS",
+   "evidence": {
+    "evidence": "filed structure check"
+   }
+  },
+  {
+   "id": "P3",
+   "check": "pre-registration compliance: where the lenses agree, filed with confidence",
+   "status": "PASS",
+   "evidence": {
+    "evidence": "filed structure check"
+   }
+  },
+  {
+   "id": "P4",
+   "check": "pre-registration compliance: where they invert, filed under the Tribunal Camp-Marker",
+   "status": "PASS",
+   "evidence": {
+    "evidence": "filed structure check"
+   }
+  },
+  {
+   "id": "P5",
+   "check": "pre-registration compliance: no sole-survivor cap (the cap discipline holds)",
+   "status": "PASS",
+   "evidence": {
+    "evidence": "filed structure check"
+   }
+  },
+  {
+   "id": "P6",
+   "check": "pre-registration compliance: the marker up for the whole session; the family filing marked",
+   "status": "PASS",
+   "evidence": {
+    "evidence": "filed structure check"
+   }
+  }
+ ],
+ "findings": [
+  {
+   "id": "E6",
+   "grade": "erratum",
+   "statement": "Many-minds' N4 row is quoted as 'nearly unanimous 0 (1, 1, 0, 0, 0)'; the filed cells are (0, 1, 0, 0, 0) - the single 1 is the Bohmian's, not the Everettian's. The count (one scorer at 1) was correct; the position was transposed.",
+   "evidence": {
+    "data": [
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    "quoted": [
+     1,
+     1,
+     0,
+     0,
+     0
+    ]
+   },
+   "materiality": "none - the count was right; no order or class rests on which scorer gave the 1"
+  },
+  {
+   "id": "E5",
+   "grade": "erratum",
+   "statement": "Everett's N2 row is quoted as '2-2-1-2-2 (the derivation priced as supported by most, partial by one)'; the filed cells are 2-1-1-2-2 - partial by two (6-b and 6-c the partials). One cell transcribed up (6-b's 1 quoted as 2), the parenthetical undercounted.",
+   "evidence": {
+    "data": [
+     2,
+     1,
+     1,
+     2,
+     2
+    ],
+    "quoted": [
+     2,
+     2,
+     1,
+     2,
+     2
+    ]
+   },
+   "materiality": "none - the mean totals are data-derived and correct; the error lives in the sentence, not the number"
+  },
+  {
+   "id": "E1",
+   "grade": "erratum",
+   "statement": "doc 93's Finding 1 (and the instrument's persona_invariance note, and the summary layer) states GRW's rank as unanimous; the filed per-scorer ranks are 1,1,1,1,2 - the Everettian's self-scored Everett 10 displaces GRW to second in his table alone. The unanimity that is real is the unanimity of TOTALS (9,9,9,9,9, range 0); the mean rank 1.2 is filed correctly two sentences earlier; the rank sentence overclaims its own data.",
+   "evidence": {
+    "grw_per_scorer_rank": {
+     "6-a": 2.0,
+     "6-b": 1.0,
+     "6-c": 1.0,
+     "6-d": 1.0,
+     "6-e": 1.0
+    },
+    "grw_mean_rank": 1.2,
+    "cause": "6-a's Everett total 10 outranks GRW's 9 in the Everettian's own table",
+    "totals_are_unanimous": true,
+    "rank_one_count": 4
+   },
+   "materiality": "none on any filed order: battery rank 1st, the -5 inversion, the GRW correction, and every mean total are data-derived and stand unchanged; the erratum is sentence-level"
+  },
+  {
+   "id": "E3",
+   "grade": "erratum",
+   "statement": "Bohm's Lens A 4th to Lens B 2nd is a two-grade move; the instrument files it in the mild(2) class; the text calls it 'one grade off' - an understatement of a divergence, the mirror direction of E1's overstatement.",
+   "evidence": {
+    "lens_a_rank": 4,
+    "battery_rank": 2.0,
+    "delta": -2.0,
+    "instrument_class": "mild_divergence_delta_2"
+   },
+   "materiality": "none on the classification: bohm stays in the mild class either way; the doc's own instrument and Part 4's treatment agree on mild; only the grade count in the sentence is wrong"
+  },
+  {
+   "id": "E4",
+   "grade": "note",
+   "statement": "The fork-partition sentence (Part 2) and the verdict's reduction field place GRW's flashes among the placements; GRW's own Lens A filing is FAILURE-as-bridge (the flash-term bought). The straddle is real, disclosed in Parts 4 and 6, but the reduction sentences - the most quotable lines in the document - do not carry the marker with them.",
+   "evidence": {
+    "grw_lens_a_filing": "FAILURE as bridge (the collapse term bought as dynamical law) + the field's most serious measurement campaign - the one ",
+    "reduction_sentence": "the QM field, run through both lenses, collapses onto the corpus's own fork (C5): state-as-world (the residue placed at index / particle / flash / realm - Everett, Bohm, GRW, histories) vs state-as-re",
+    "disclosed_elsewhere": "Parts 4 and 6 file the straddle (the inversion; REFRAMED: failure as grammar-bridge, first-class as physics)"
+   },
+   "materiality": "none on the reduction's content: the fork topology itself is unaffected; the note files a marker-placement defect, not a topology error"
+  },
+  {
+   "id": "E2",
+   "grade": "erratum",
+   "statement": "The gift-scan finds a third aligned differential the filing does not disclose: 6-a (Everettian) scored his own camp's Everett N1 = 2 where all four others scored 1 - the exact shape of doc 92's N1 parity self-gift, replicated in a third field, cited in Part 4's agreement text ('N1 2-1-1-1-1') without the camp-differential marker. Two of the battery's three differentials were disclosed in the scorers' metas; this one was not.",
+   "evidence": {
+    "cells": [
+     2,
+     1,
+     1,
+     1,
+     1
+    ],
+    "if_zeroed": {
+     "6_a_everett_total": 9,
+     "mean_total": 7.2,
+     "rank_stays": "3rd"
+    }
+   },
+   "materiality": "none on any order: zero the cell and Everett's mean total falls 7.4 -> 7.2, still 3rd; the 3/3 agreement class is unchanged (verified by the LOO probe)"
+  }
+ ],
+ "errata": [
+  {
+   "id": "E1",
+   "filed_against": "doc 93 Part 3, Finding 1; results.json persona_invariance note",
+   "reads_as_filed": "'Rank one for all five.'",
+   "amended_reading": "Rank one for four of five scorers; rank two in the Everettian's table (his Everett 10); totals unanimous (9,9,9,9,9); mean rank 1.2 as filed",
+   "materiality": "none - every order fact stands"
+  },
+  {
+   "id": "E2",
+   "filed_against": "doc 93 Part 4, the Everett agreement cells; the self-gift accounting (two disclosed)",
+   "reads_as_filed": "'N1 2-1-1-1-1' cited without a camp-differential marker; two self-gifts disclosed",
+   "amended_reading": "three aligned differentials exist; the third (6-a everett N1) carries the doc 92 N1 self-gift shape and is now disclosed",
+   "materiality": "none - zeroing it leaves every rank and class unchanged"
+  },
+  {
+   "id": "E3",
+   "filed_against": "doc 93 Part 4, the Bohm sentence",
+   "reads_as_filed": "'one grade off (4th/2nd ...)'",
+   "amended_reading": "two grades (4th -> 2nd), the instrument's mild(2) class",
+   "materiality": "none - the mild classification stands"
+  },
+  {
+   "id": "E5",
+   "filed_against": "doc 93 Part 4, the Everett N2 row",
+   "reads_as_filed": "'N2 2-2-1-2-2 (the derivation priced as supported by most, partial by one)'",
+   "amended_reading": "N2 2-1-1-2-2 - partial by two (6-b and 6-c)",
+   "materiality": "none - the mean totals are data-derived and correct"
+  },
+  {
+   "id": "E6",
+   "filed_against": "doc 93 Part 3, Finding 5, the many-minds N4 row",
+   "reads_as_filed": "'N4 nearly unanimous 0 (1, 1, 0, 0, 0)'",
+   "amended_reading": "N4 (0, 1, 0, 0, 0) - the single 1 is the Bohmian's, not the Everettian's",
+   "materiality": "none - the count (one scorer at 1) was correct; the position was wrong"
+  },
+  {
+   "id": "E4",
+   "filed_against": "doc 93 Part 2 and Part 8, the reduction sentences",
+   "reads_as_filed": "GRW's flashes listed on the placement edge, unmarked",
+   "amended_reading": "the reduction's placement edge carries GRW with the Parts 4/6 marker attached: placement at the fork, bridge under the grammar - the straddle named in the sentence itself",
+   "materiality": "none - the fork topology is unaffected"
+  }
+ ],
+ "probes": {
+  "gift_scan": {
+   "differentials": [
+    {
+     "scorer": "6-a",
+     "theory": "everett",
+     "criterion": "N1",
+     "score": 2,
+     "others": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "disclosed": false
+    },
+    {
+     "scorer": "6-a",
+     "theory": "everett",
+     "criterion": "N5",
+     "score": 2,
+     "others": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "disclosed": true
+    },
+    {
+     "scorer": "6-e",
+     "theory": "rqm",
+     "criterion": "N2",
+     "score": 2,
+     "others": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "disclosed": true
+    }
+   ],
+   "concentration": "all three differentials sit at the criterion that carries the camp's charter claim: N1 for the unitary literalist ('nothing external added'), N2 for the relational deletionist ('the deletion executed'), N5 for the Everettian's testability claim - the doc 92 regularity, now measured in a third field"
+  },
+  "leave_one_out": {
+   "classification_stability": "the agree/mild/inversion class of every theory is stable under all five leave-one-out recomputes except the mild class itself, which dissolves when the Bohmian is removed (bohm and everett both become agree-class)",
+   "unstable_cells": [
+    {
+     "remove": "6-b",
+     "theory": "bohm",
+     "full_class": "mild",
+     "loo_class": "agree"
+    }
+   ],
+   "inversions_invariant": true,
+   "grw_first_invariant": true,
+   "bohm_everett_second_third": {
+    "remove_6-b": {
+     "everett": {
+      "loo_rank": 2.0,
+      "delta": -1.0,
+      "class": "agree"
+     },
+     "bohm": {
+      "loo_rank": 3.0,
+      "delta": -1.0,
+      "class": "agree"
+     }
+    }
+   },
+   "loo_table": {
+    "6-a": {
+     "copenhagen": {
+      "loo_rank": 8.0,
+      "delta": 1.0,
+      "class": "agree"
+     },
+     "wigner": {
+      "loo_rank": 9.0,
+      "delta": 0.0,
+      "class": "agree"
+     },
+     "grw": {
+      "loo_rank": 1.0,
+      "delta": -5.0,
+      "class": "inversion"
+     },
+     "everett": {
+      "loo_rank": 3.0,
+      "delta": 0.0,
+      "class": "agree"
+     },
+     "bohm": {
+      "loo_rank": 2.0,
+      "delta": -2.0,
+      "class": "mild"
+     },
+     "qbism": {
+      "loo_rank": 6.0,
+      "delta": 4.0,
+      "class": "inversion"
+     },
+     "rqm": {
+      "loo_rank": 4.0,
+      "delta": 3.0,
+      "class": "inversion"
+     },
+     "histories": {
+      "loo_rank": 5.0,
+      "delta": 0.0,
+      "class": "agree"
+     },
+     "many-minds": {
+      "loo_rank": 7.0,
+      "delta": -1.0,
+      "class": "agree"
+     }
+    },
+    "6-b": {
+     "copenhagen": {
+      "loo_rank": 8.0,
+      "delta": 1.0,
+      "class": "agree"
+     },
+     "wigner": {
+      "loo_rank": 9.0,
+      "delta": 0.0,
+      "class": "agree"
+     },
+     "grw": {
+      "loo_rank": 1.0,
+      "delta": -5.0,
+      "class": "inversion"
+     },
+     "everett": {
+      "loo_rank": 2.0,
+      "delta": -1.0,
+      "class": "agree"
+     },
+     "bohm": {
+      "loo_rank": 3.0,
+      "delta": -1.0,
+      "class": "agree"
+     },
+     "qbism": {
+      "loo_rank": 5.0,
+      "delta": 3.0,
+      "class": "inversion"
+     },
+     "rqm": {
+      "loo_rank": 4.0,
+      "delta": 3.0,
+      "class": "inversion"
+     },
+     "histories": {
+      "loo_rank": 6.0,
+      "delta": 1.0,
+      "class": "agree"
+     },
+     "many-minds": {
+      "loo_rank": 7.0,
+      "delta": -1.0,
+      "class": "agree"
+     }
+    },
+    "6-c": {
+     "copenhagen": {
+      "loo_rank": 8.0,
+      "delta": 1.0,
+      "class": "agree"
+     },
+     "wigner": {
+      "loo_rank": 9.0,
+      "delta": 0.0,
+      "class": "agree"
+     },
+     "grw": {
+      "loo_rank": 1.0,
+      "delta": -5.0,
+      "class": "inversion"
+     },
+     "everett": {
+      "loo_rank": 2.5,
+      "delta": -0.5,
+      "class": "agree"
+     },
+     "bohm": {
+      "loo_rank": 2.5,
+      "delta": -1.5,
+      "class": "mild"
+     },
+     "qbism": {
+      "loo_rank": 6.0,
+      "delta": 4.0,
+      "class": "inversion"
+     },
+     "rqm": {
+      "loo_rank": 4.0,
+      "delta": 3.0,
+      "class": "inversion"
+     },
+     "histories": {
+      "loo_rank": 5.0,
+      "delta": 0.0,
+      "class": "agree"
+     },
+     "many-minds": {
+      "loo_rank": 7.0,
+      "delta": -1.0,
+      "class": "agree"
+     }
+    },
+    "6-d": {
+     "copenhagen": {
+      "loo_rank": 8.0,
+      "delta": 1.0,
+      "class": "agree"
+     },
+     "wigner": {
+      "loo_rank": 9.0,
+      "delta": 0.0,
+      "class": "agree"
+     },
+     "grw": {
+      "loo_rank": 1.0,
+      "delta": -5.0,
+      "class": "inversion"
+     },
+     "everett": {
+      "loo_rank": 3.0,
+      "delta": 0.0,
+      "class": "agree"
+     },
+     "bohm": {
+      "loo_rank": 2.0,
+      "delta": -2.0,
+      "class": "mild"
+     },
+     "qbism": {
+      "loo_rank": 6.0,
+      "delta": 4.0,
+      "class": "inversion"
+     },
+     "rqm": {
+      "loo_rank": 4.0,
+      "delta": 3.0,
+      "class": "inversion"
+     },
+     "histories": {
+      "loo_rank": 5.0,
+      "delta": 0.0,
+      "class": "agree"
+     },
+     "many-minds": {
+      "loo_rank": 7.0,
+      "delta": -1.0,
+      "class": "agree"
+     }
+    },
+    "6-e": {
+     "copenhagen": {
+      "loo_rank": 8.0,
+      "delta": 1.0,
+      "class": "agree"
+     },
+     "wigner": {
+      "loo_rank": 9.0,
+      "delta": 0.0,
+      "class": "agree"
+     },
+     "grw": {
+      "loo_rank": 1.0,
+      "delta": -5.0,
+      "class": "inversion"
+     },
+     "everett": {
+      "loo_rank": 3.0,
+      "delta": 0.0,
+      "class": "agree"
+     },
+     "bohm": {
+      "loo_rank": 2.0,
+      "delta": -2.0,
+      "class": "mild"
+     },
+     "qbism": {
+      "loo_rank": 6.0,
+      "delta": 4.0,
+      "class": "inversion"
+     },
+     "rqm": {
+      "loo_rank": 4.0,
+      "delta": 3.0,
+      "class": "inversion"
+     },
+     "histories": {
+      "loo_rank": 5.0,
+      "delta": 0.0,
+      "class": "agree"
+     },
+     "many-minds": {
+      "loo_rank": 7.0,
+      "delta": -1.0,
+      "class": "agree"
+     }
+    }
+   }
+  },
+  "n5_sensitivity": {
+   "marked_as": "A CONDITIONAL, NOT A RE-RANKING - the Camp-Marker governs the auditor; zeroing the criterion every scorer flagged is a sensitivity probe, and its output is which order facts the criterion carries, not a new order",
+   "mean_totals_with_N5_zeroed": {
+    "copenhagen": 4.2,
+    "wigner": 2.6,
+    "grw": 7.0,
+    "everett": 6.8,
+    "bohm": 6.8,
+    "qbism": 5.6,
+    "rqm": 6.2,
+    "histories": 5.6,
+    "many-minds": 4.6
+   },
+   "order_with_N5_zeroed": {
+    "grw": 1.0,
+    "everett": 2.5,
+    "bohm": 2.5,
+    "rqm": 4.0,
+    "qbism": 5.5,
+    "histories": 5.5,
+    "many-minds": 7.0,
+    "copenhagen": 8.0,
+    "wigner": 9.0
+   },
+   "surviving_facts": [
+    "GRW stays 1st (7.0 vs bohm/everett 6.8) - the unanimity carries the first place even with the flagged criterion removed, which strengthens the GRW correction beyond its own filing",
+    "the family's mid-field standing is N5-invariant (rqm 6.2, qbism 5.6 - their N5 is 0)",
+    "the bottom two are N5-invariant in class"
+   ],
+   "tightening_facts": [
+    "the 2nd/3rd margin collapses to a tie (bohm 6.8 = everett 6.8)",
+    "wigner falls 3.6 -> 2.6 (his only earned points were N1 and N3)"
+   ]
+  }
+ },
+ "compliance": {
+  "P1": {
+   "clause": "both lenses on the same field: the same nine interpretations under Lens A and Lens B",
+   "status": "PASS"
+  },
+  "P2": {
+   "clause": "the divergence filed as part of the verdict",
+   "status": "PASS"
+  },
+  "P3": {
+   "clause": "where the lenses agree, filed with confidence",
+   "status": "PASS"
+  },
+  "P4": {
+   "clause": "where they invert, filed under the Tribunal Camp-Marker",
+   "status": "PASS"
+  },
+  "P5": {
+   "clause": "no sole-survivor cap (the cap discipline holds)",
+   "status": "PASS"
+  },
+  "P6": {
+   "clause": "the marker up for the whole session; the family filing marked",
+   "status": "PASS"
+  }
+ },
+ "verdict": {
+  "checks": {
+   "total": 35,
+   "pass": 29,
+   "flag": 5,
+   "note": 1
+  },
+  "spine": {
+   "reproduction": "byte-identical (sha256)",
+   "arithmetic": "225/225; every aggregate re-derived identically",
+   "pre_registration": "all six clauses honored",
+   "cap": "none issued; the protocol held",
+   "grw_correction": "stands, and strengthened by the N5-probe (first place is N5-invariant)",
+   "reduction": "stands; E4 files a marker-placement note"
+  },
+  "verdict_line": "DOC 93 SURVIVES ITS AUDIT: five errata and one marker note, all in the text layer, none touching a filed number, an order fact, the two-lens topology, the no-cap discipline, the GRW correction, or the reduction. The data layer is internally consistent and deterministic; the narration drifted from it in six places - three in the narrative's direction (E1, E3, E5), three neutral or against (E2, E4, E6).",
+  "recursion": "doc 92 Part 10's audit-the-audit prediction, retired unexecuted at doc 93 Part 9, EXECUTED HERE at doc 94: the corpus's standing rule applies - a claim that has been audited, and amended by its audit, is ready twice. Doc 93 is ready twice.",
+  "determinism_count": 798,
+  "standing_moves": [
+   "chassis deployment (next compute, unchanged)",
+   "P4's derivation (next formal session, now building on an audited doc 93)",
+   "the amended marker discipline gains one clause from this audit: summary sentences are derived from, or checked against, the registered instrument - the note is not the data"
+  ]
+ },
+ "claims": [
+  {
+   "id": "C1",
+   "claim": "GRW scored 9,9,9,9,9 (persona range 0)",
+   "data": [
+    9,
+    9,
+    9,
+    9,
+    9
+   ],
+   "quoted_or_expected": [
+    9,
+    9,
+    9,
+    9,
+    9
+   ],
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "id": "C2",
+   "claim": "Everett scored 10,6,6,7,8 (range 4, the field's widest)",
+   "data": [
+    10,
+    6,
+    6,
+    7,
+    8
+   ],
+   "quoted_or_expected": [
+    10,
+    6,
+    6,
+    7,
+    8
+   ],
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "id": "C3",
+   "claim": "the Everettian's Everett N5 = 2 where the others scored 0,0,0,1",
+   "data": [
+    2,
+    0,
+    0,
+    0,
+    1
+   ],
+   "quoted_or_expected": [
+    2,
+    0,
+    0,
+    0,
+    1
+   ],
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "id": "C4",
+   "claim": "the participatory's RQM N2 = 2 where the others scored 1",
+   "data": [
+    1,
+    1,
+    1,
+    1,
+    2
+   ],
+   "quoted_or_expected": [
+    1,
+    1,
+    1,
+    1,
+    2
+   ],
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "id": "C5",
+   "claim": "N1 split: GRW 2,2,2,2,2",
+   "data": [
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "quoted_or_expected": [
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "id": "C6",
+   "claim": "N1 split: RQM 1,1,1,1,1",
+   "data": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "quoted_or_expected": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "id": "C7",
+   "claim": "N1 split: Bohm 2,2,2,2,2",
+   "data": [
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "quoted_or_expected": [
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "id": "C8",
+   "claim": "N1 split: QBism 1,1,1,1,1",
+   "data": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "quoted_or_expected": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "id": "C9",
+   "claim": "Everett N1 quoted 2-1-1-1-1",
+   "data": [
+    2,
+    1,
+    1,
+    1,
+    1
+   ],
+   "quoted_or_expected": [
+    2,
+    1,
+    1,
+    1,
+    1
+   ],
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "id": "C10",
+   "claim": "Wigner N4 unanimous 0,0,0,0,0; no scorer above 4",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "quoted_or_expected": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "status": "PASS",
+   "note": "totals [4, 4, 3, 3, 4], max 4"
+  },
+  {
+   "id": "C11",
+   "claim": "Copenhagen N1 quoted 1,0,0,0,1",
+   "data": [
+    1,
+    0,
+    0,
+    0,
+    1
+   ],
+   "quoted_or_expected": [
+    1,
+    0,
+    0,
+    0,
+    1
+   ],
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "id": "C12",
+   "claim": "many-minds N4 quoted (1,1,0,0,0)",
+   "data": [
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "quoted_or_expected": [
+    1,
+    1,
+    0,
+    0,
+    0
+   ],
+   "status": "FLAG",
+   "note": ""
+  },
+  {
+   "id": "C13",
+   "claim": "many-minds N2 quoted (2,1,2,2,1)",
+   "data": [
+    2,
+    1,
+    2,
+    2,
+    1
+   ],
+   "quoted_or_expected": [
+    2,
+    1,
+    2,
+    2,
+    1
+   ],
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "id": "C14",
+   "claim": "Everett N2 quoted 2-2-1-2-2 ('partial by one')",
+   "data": [
+    2,
+    1,
+    1,
+    2,
+    2
+   ],
+   "quoted_or_expected": [
+    2,
+    2,
+    1,
+    2,
+    2
+   ],
+   "status": "FLAG",
+   "note": ""
+  },
+  {
+   "id": "C15",
+   "claim": "Everett N3 and N4 unanimous 2s",
+   "data": [
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "quoted_or_expected": [
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "id": "C16",
+   "claim": "QBism N2 quoted 2-1-1-2-2",
+   "data": [
+    2,
+    1,
+    1,
+    2,
+    2
+   ],
+   "quoted_or_expected": [
+    2,
+    1,
+    1,
+    2,
+    2
+   ],
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "id": "C17",
+   "claim": "RQM and QBism N5 unanimous 0s",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "quoted_or_expected": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "status": "PASS",
+   "note": ""
+  }
+ ]
+}
