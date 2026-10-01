@@ -1,0 +1,339 @@
+{
+ "spec": {
+  "criteria": {
+   "N1": "PRIMITIVE LINK: does the theory posit a primitive (brute, unexplained) relation between physical structure and experience that is not entailed by the theory's own ontology? 2 = no such link or fully entailed; 1 = primitive but motivated, structured, or internal to the core identity claim; 0 = brute external link doing the load-bearing work.",
+   "N2": "FIRST-PERSON REPORTS: does the theory explain first-person reports, eliminate them, or leave them unexplained? 2 = explains with a supported account OR eliminates with a well-supported deflation (elimination is a legitimate stance if executed); 0 = leaves them unexplained or brute; 1 = partial.",
+   "N3": "CAUSAL COMPATIBILITY: does the theory make consciousness causally efficacious in a way that conflicts with physics? 2 = fully compatible; 0 = direct conflict (closure or conservation violations); 1 = tension without outright violation.",
+   "N4": "OBSERVER: does the theory require a special observer (homunculus, inner witness, privileged point of view) for consciousness to occur? 2 = no; 0 = regress-inducing or metaphysically problematic observer; 1 = observer-like but non-regressive and motivated.",
+   "N5": "FALSIFIABILITY: does the theory make at least one claim that could be falsified, and has any relevant test actually been run? 2 = falsifiable and tested at least indirectly; 0 = no falsifiable content; 1 = falsifiable in principle but untested, or only very indirectly tested."
+  },
+  "theories": [
+   "functionalism",
+   "dualism",
+   "iit",
+   "illusionism",
+   "physicalism",
+   "gwt",
+   "russellian",
+   "higher-order",
+   "panpsychism"
+  ],
+  "personas": {
+   "4-a": "Type-B reductive physicalist (Papineau/Loar): identity needs no bridge; parsimony is the supreme virtue; skeptical of any ontology beyond physics.",
+   "4-b": "Empirical functionalist cognitive scientist (Marr levels, workspace modeling): mechanisms, data, falsifiable models; suspicious of armchair metaphysics.",
+   "4-c": "Illusionist (Frankish/Dennett): phenomenal properties as standardly conceived do not exist; values total coverage of report data and maximum parsimony.",
+   "4-d": "Neutral methodologist (Lakatos; adversarial-collaboration format): no allegiance; applies criteria exactly as written, mechanically and charitably.",
+   "4-e": "Russellian monist (Russell/Goff; structural-realist literature): physics is structural through and through and silent on intrinsic nature; the identification of intrinsic nature with phenomenal character makes the problem's shape intelligible."
+  },
+  "blindness": "Scorers received only the nine steelmanned theories, the five criteria, the rubric, and their persona. They did not receive doc 90, the four campaigns, the tribunal's verdict, the corpus, or any hint of a desired outcome. They read and wrote no files. Justifications below are condensed as scored; the full transcripts are in the session record."
+ },
+ "tribunal": {
+  "rank": {
+   "russellian": 1,
+   "illusionism": 2,
+   "panpsychism": 3,
+   "gwt": 4,
+   "iit": 5,
+   "higher-order": 6,
+   "physicalism": 7,
+   "functionalism": 8,
+   "dualism": 9
+  },
+  "filing": {
+   "russellian": "SOLE SURVIVOR - the placed form (no bridge bought; dark-system dissolved, theorem grade; places)",
+   "illusionism": "SURVIVOR BY DELETION (cost: the undischarged performance, the question returned to sender)",
+   "panpsychism": "SURVIVOR AS POSITION; FAILURE AS BRIDGE (combination unposeable)",
+   "gwt": "FAILURE as bridge; SURVIVOR as access-law (publication without readership)",
+   "iit": "FAILURE (bridge - the identification step) + the field's most serious measurement campaign",
+   "higher-order": "FAILURE (bridge - the generator) + the closest approach to the missing instrument",
+   "physicalism": "FAILURE (bridge - P*b identity; the dark duplicate excluded by fiat)",
+   "functionalism": "FAILURE (bridge - P*a/c realization; declines the dark system)",
+   "dualism": "FAILURE (bridge bought; interactionism falsified on earned ground)"
+  }
+ },
+ "arithmetic_check": {
+  "all_totals_match": true,
+  "cells_checked": 45
+ },
+ "totals": {
+  "4-a": {
+   "functionalism": 9,
+   "dualism": 7,
+   "iit": 9,
+   "illusionism": 9,
+   "physicalism": 10,
+   "gwt": 9,
+   "russellian": 7,
+   "higher-order": 9,
+   "panpsychism": 7
+  },
+  "4-b": {
+   "functionalism": 10,
+   "dualism": 5,
+   "iit": 10,
+   "illusionism": 10,
+   "physicalism": 8,
+   "gwt": 10,
+   "russellian": 7,
+   "higher-order": 9,
+   "panpsychism": 7
+  },
+  "4-c": {
+   "functionalism": 9,
+   "dualism": 6,
+   "iit": 8,
+   "illusionism": 10,
+   "physicalism": 9,
+   "gwt": 9,
+   "russellian": 6,
+   "higher-order": 9,
+   "panpsychism": 6
+  },
+  "4-d": {
+   "functionalism": 9,
+   "dualism": 6,
+   "iit": 9,
+   "illusionism": 9,
+   "physicalism": 9,
+   "gwt": 10,
+   "russellian": 7,
+   "higher-order": 9,
+   "panpsychism": 7
+  },
+  "4-e": {
+   "functionalism": 8,
+   "dualism": 6,
+   "iit": 9,
+   "illusionism": 8,
+   "physicalism": 9,
+   "gwt": 9,
+   "russellian": 9,
+   "higher-order": 8,
+   "panpsychism": 6
+  }
+ },
+ "mean_total": {
+  "functionalism": 9.0,
+  "dualism": 6.0,
+  "iit": 9.0,
+  "illusionism": 9.2,
+  "physicalism": 9.0,
+  "gwt": 9.4,
+  "russellian": 7.2,
+  "higher-order": 8.8,
+  "panpsychism": 6.6
+ },
+ "range_total": {
+  "functionalism": 2,
+  "dualism": 2,
+  "iit": 2,
+  "illusionism": 2,
+  "physicalism": 2,
+  "gwt": 1,
+  "russellian": 3,
+  "higher-order": 1,
+  "panpsychism": 1
+ },
+ "mean_rank": {
+  "functionalism": 4.0,
+  "dualism": 9.0,
+  "iit": 4.0,
+  "illusionism": 2.0,
+  "physicalism": 4.0,
+  "gwt": 1.0,
+  "russellian": 7.0,
+  "higher-order": 6.0,
+  "panpsychism": 8.0
+ },
+ "per_scorer_rank": {
+  "4-a": {
+   "functionalism": 4.0,
+   "dualism": 8.0,
+   "iit": 4.0,
+   "illusionism": 4.0,
+   "physicalism": 1.0,
+   "gwt": 4.0,
+   "russellian": 8.0,
+   "higher-order": 4.0,
+   "panpsychism": 8.0
+  },
+  "4-b": {
+   "functionalism": 2.5,
+   "dualism": 9.0,
+   "iit": 2.5,
+   "illusionism": 2.5,
+   "physicalism": 6.0,
+   "gwt": 2.5,
+   "russellian": 7.5,
+   "higher-order": 5.0,
+   "panpsychism": 7.5
+  },
+  "4-c": {
+   "functionalism": 3.5,
+   "dualism": 8.0,
+   "iit": 6.0,
+   "illusionism": 1.0,
+   "physicalism": 3.5,
+   "gwt": 3.5,
+   "russellian": 8.0,
+   "higher-order": 3.5,
+   "panpsychism": 8.0
+  },
+  "4-d": {
+   "functionalism": 4.0,
+   "dualism": 9.0,
+   "iit": 4.0,
+   "illusionism": 4.0,
+   "physicalism": 4.0,
+   "gwt": 1.0,
+   "russellian": 7.5,
+   "higher-order": 4.0,
+   "panpsychism": 7.5
+  },
+  "4-e": {
+   "functionalism": 6.0,
+   "dualism": 8.5,
+   "iit": 2.5,
+   "illusionism": 6.0,
+   "physicalism": 2.5,
+   "gwt": 2.5,
+   "russellian": 2.5,
+   "higher-order": 6.0,
+   "panpsychism": 8.5
+  }
+ },
+ "rm_rank_by_scorer": {
+  "4-a": 8.0,
+  "4-b": 7.5,
+  "4-c": 8.0,
+  "4-d": 7.5,
+  "4-e": 2.5
+ },
+ "rm_persona_sensitivity": {
+  "rm_range": 3,
+  "field_ranges": {
+   "functionalism": 2,
+   "dualism": 2,
+   "iit": 2,
+   "illusionism": 2,
+   "physicalism": 2,
+   "gwt": 1,
+   "russellian": 3,
+   "higher-order": 1,
+   "panpsychism": 1
+  },
+  "rm_range_is_field_max": true
+ },
+ "n1_parity": {
+  "cells": {
+   "4-a": {
+    "russellian": 1,
+    "physicalism": 2
+   },
+   "4-b": {
+    "russellian": 1,
+    "physicalism": 1
+   },
+   "4-c": {
+    "russellian": 1,
+    "physicalism": 1
+   },
+   "4-d": {
+    "russellian": 1,
+    "physicalism": 1
+   },
+   "4-e": {
+    "russellian": 2,
+    "physicalism": 1
+   }
+  },
+  "unaligned_parity": true,
+  "aligned_self_gift": {
+   "4-a": 1,
+   "4-e": 1
+  },
+  "note": "the unaligned scorers (functionalist, illusionist, neutral) score the Russellian identification and the Type-B identity at parity; each aligned scorer gifts his own camp +1. doc 90's bridge criterion institutionalized the 4-e differential (placement is not a bridge; identity is a bought bridge)."
+ },
+ "n2_parity": {
+  "cells": {
+   "4-a": {
+    "russellian": 1,
+    "illusionism": 2
+   },
+   "4-b": {
+    "russellian": 1,
+    "illusionism": 2
+   },
+   "4-c": {
+    "russellian": 1,
+    "illusionism": 2
+   },
+   "4-d": {
+    "russellian": 1,
+    "illusionism": 2
+   },
+   "4-e": {
+    "russellian": 2,
+    "illusionism": 1
+   }
+  },
+  "illusionism_above_rm_for": [
+   "4-a",
+   "4-b",
+   "4-c",
+   "4-d"
+  ],
+  "note": "four of five scorers (including the neutral control) score executed deletion above promissory self-acquaintance on the report criterion; only the Russellian reverses. doc 90's tribunal reversed it for everyone - deletion was charged a price, acquaintance was filed as the strongest convergence the corpus can certify."
+ },
+ "correlation": {
+  "spearman_vs_mean": 0.2,
+  "spearman_by_scorer": {
+   "4-a": -0.133,
+   "4-b": 0.137,
+   "4-c": 0.033,
+   "4-d": 0.121,
+   "4-e": 0.321
+  }
+ },
+ "inversion": {
+  "tribunal_no1": "russellian",
+  "tribunal_no1_battery_mean_rank": 7.0,
+  "tribunal_no1_battery_rank_by_scorer": {
+   "4-a": 8.0,
+   "4-b": 7.5,
+   "4-c": 8.0,
+   "4-d": 7.5,
+   "4-e": 2.5
+  },
+  "tribunal_failures_battery_mean_ranks": {
+   "physicalism": 4.0,
+   "functionalism": 4.0,
+   "iit": 4.0,
+   "gwt": 1.0,
+   "higher-order": 6.0,
+   "dualism": 9.0
+  },
+  "rm_n5_by_scorer": {
+   "4-a": 1,
+   "4-b": 1,
+   "4-c": 0,
+   "4-d": 1,
+   "4-e": 1
+  },
+  "note": "the tribunal's sole survivor holds the battery's mean rank 7 of 9 (never above 7th for any scorer except the Russellian himself); five of the tribunal's six failures occupy the battery's top five places; the sixth (dualism) is the one failure grounded in evidence rather than in the bridge criterion, and the battery upholds it. RM's N5 (falsifiability) is persona-invariantly low (1,1,0,1,1) - the criterion where the tribunal converted RM's worst score into its best answer ('a principled refusal')."
+ },
+ "verdict": {
+  "uniqueness_reproduces_under_neutral_criteria": false,
+  "criteria_stable_across_personas": false,
+  "n1_differential_is_camp_relative": true,
+  "tribunal_battery_correlation": 0.2,
+  "filing": "REFUTED AS FILED - the SOLE SURVIVOR cap does not survive neutral re-scoring (survivorship is criterion-relative; the differential that produced it is camp-relative); AMENDED FORM SURVIVES - RM-placed is the field-position most isomorphic to the corpus's own grammar, a convergence claim, not a superiority claim; the tribunal's one evidence-grounded failure (dualism) is upheld; the theorems are untouched."
+ },
+ "scorer_meta": {
+  "4-a": "N1 hardest: the 0-bucket uninhabitable for steelmanned theories; the 2-vs-1 line effectively tracks added ontology beyond physics - a parsimony standard loaded in my favor. N5 'at least one claim' ambiguous between signature and shared entailments. N2's explicit blessing of executed elimination is loaded in illusionism's favor; applied as written. SELF-CHECK: pull to gift physicalism N1; checked by extending identity-courtesy to functionalism, IIT, HOT; dislike of RM as 'dualism in a physicalist uniform, insulated from any test' indulged only where criteria tracked it.",
+  "4-b": "N1 hardest: the 1-vs-2 line turns on whether a steelman concedes bruteness versus claims constitution - partly rhetorical framing; a Type-B defender could argue their no-relation identity deserves the 2 that functionalism's constitutive claim gets, so N1 quietly favors constitutive-identity framings, which happen to be my camp. SELF-CHECK: the pull I indulged shows up only in caveats - functionalism's N1 2 rests on accepting its question-begging rejoinder at face value, a constitutive-framing benefit I denied Type-B physicalism on a thin distinction, and I flag that asymmetry rather than bury it.",
+  "4-c": "N2 hardest: the line between explaining reports and buying them verbatim is exactly where my bias lives. N1's 'external to the ontology' ambiguous - any theory can internalize a primitive by positing it. THE RUBRIC ITSELF IS LOADED IN THE DEFLATIONIST'S FAVOR: N2's 'elimination is a legitimate stance' is an illusionist-designed clause, N1's primitive-link framing structurally penalizes realist bridging, N5's tested-requirement caps purely metaphysical theories at 0. A realist scorer would dispute N2's elimination license and N1's framing, and would not produce this table - which is itself the most informative result of the exercise. SELF-CHECK: pull toward a clean sweep, re-audited every cell; did not resist the overall alignment because the criteria's structure genuinely rewards no-ransom theories.",
+  "4-d": "N1 hardest and loaded in favor of deflationary theories: the 'entailed within the theory' bucket lets stipulated definitions count as derivations, rewarding theories that build the link into their definition (functionalism, GWT, HOT, illusionism) and penalizing theories honest enough to admit a structured primitive (dualism, physicalism, russellian, IIT, panpsychism) - applied uniformly, this flatters definitional fiat and re-scoping. N5 forced a choice between 'any tested claim' (too lax) and 'distinctively tested content'. GWT's perfect 10 partly reflects that the criteria reward measurable-scope retreat, which a Lakatosian could read as honest discipline OR a degenerating problem-shift. SELF-CHECK: pull to punish illusionism's elimination as evasion; rubric legitimizes it; caught myself on consistency at N4.",
+  "4-e": "N1 hardest: its anchors blur because every identity theory self-describes as needing no bridge, so the scorer must judge whether linklessness is sustained (a categorical-basis identification filling a slot structural realism independently requires) or merely asserted against the datum (Type-B's admitted brute identity, functionalism's stipulation) - a judgment my structural-realist commitments load and a rival scorer could mirror-image. N5 structurally loaded toward theories with measurable targets - accepted, RM takes 1 there. SELF-CHECK: the pull showed up most at N1, where RM's 2 versus physicalism's 1 rests on the categorical-basis/slot-filling differential that a Type-B scorer would certainly reverse - there I indulged the persona. Resisted elsewhere: RM takes 1 (not 2) on N5, below all five empirically tested theories."
+ }
+}

@@ -1,0 +1,12 @@
+# local-only files - never commit (the repo is public)
+.github_pat
+.git-credentials
+.corpus-cache/
+worklog.md
+AGENT.md
+tool-results/
+download/
+scripts/
+.env
+__pycache__/
+*.pyc
