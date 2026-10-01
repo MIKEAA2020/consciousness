@@ -1,0 +1,446 @@
+{
+ "spec": {
+  "criteria": {
+   "N1": "PRIMITIVE LINK: does the interpretation posit a primitive (brute, unexplained) relation between the quantum formalism (its unitary evolution) and definite outcomes (the single results, records, and experiences experiments actually deliver) that is not entailed by the interpretation's own dynamics or ontology? 2 = no such link, or fully entailed; 1 = a primitive, but motivated, structured, or internal to the core claim; 0 = a brute external link doing the load-bearing work.",
+   "N2": "DEFINITE OUTCOMES: does the interpretation explain why experiments have single definite outcomes with Born-rule statistics - or eliminate/deflate the question, or leave it unexplained? 2 = explains with a supported account, or eliminates/deflates with a well-supported account (deflation is a legitimate stance if executed); 0 = leaves it brute; 1 = partial.",
+   "N3": "CAUSAL COMPATIBILITY: does the interpretation conflict with confirmed physics - conservation laws, Lorentz covariance, no-signalling, or observed phenomenology? 2 = fully compatible; 0 = direct conflict; 1 = tension without outright violation.",
+   "N4": "OBSERVER: does the interpretation require a special observer - consciousness, a classical apparatus or domain, a privileged frame or external context - for outcomes to occur? 2 = no; 0 = a regress-inducing or metaphysically privileged observer; 1 = observer-like but non-regressive and motivated.",
+   "N5": "FALSIFIABILITY: does the interpretation make at least one claim beyond standard quantum mechanics's predictions that could be falsified, and has any relevant test actually been run? 2 = falsifiable and tested at least indirectly; 0 = no falsifiable content beyond standard QM; 1 = falsifiable in principle but untested, or only very indirectly tested."
+  },
+  "theories": [
+   "copenhagen",
+   "wigner",
+   "grw",
+   "everett",
+   "bohm",
+   "qbism",
+   "rqm",
+   "histories",
+   "many-minds"
+  ],
+  "personas": {
+   "6-a": "Everettian (Everett/Deutsch/Wallace): the universal wavefunction is complete physical reality; parsimony of law is the supreme virtue; emergence and decoherence do the work others buy with postulates; suspicious of added ontology and of state-demoting views.",
+   "6-b": "Bohmian (de Broglie/Bohm/Durr-Goldstein-Zanghi): a fundamental theory must say what there is in plain terms - particles with positions; the measurement problem demands a literal solution; quantum equilibrium explains Born statistics thermodynamics-style; suspicious of world-pictures that dissolve into agents, beliefs, or frameworks.",
+   "6-c": "Collapse theorist (Ghirardi-Rimini-Weber/Pearle/Bassi): the measurement problem is a problem of physics; modify the dynamics, derive the phenomenology, let experiment decide; suspicious of interpretations that predict nothing new and call the problem solved.",
+   "6-d": "Neutral methodologist (Lakatos; adversarial-collaboration format): no allegiance; applies the criteria exactly as written, mechanically and charitably at the same time.",
+   "6-e": "Participatory/relational (Fuchs/Mermin/Schack/Rovelli): the quantum state is an agent's or a relation's bookkeeping, not a world-object; measurement is participation; facts are interaction-borne and relative; suspicious of reifying the wavefunction into a universal object with literal branches."
+  },
+  "blindness": "Scorers received only the nine steelmanned interpretations, the five criteria, the rubric, and their persona, with the theory order rotated per scorer (6-a base, 6-b rotate 3, 6-c rotate 6, 6-d rotate 2, 6-e rotate 5) to break order effects. They did not receive doc 90, doc 92, the four campaigns, Lens A, the corpus, or any hint of a desired outcome. They read and wrote no files. Justifications below are condensed as scored; the full transcripts are in the session record.",
+  "lens_a": "the corpus's four campaigns (Argument, Program, Measurement, Structure) as pre-registered: the registrar's four questions of doc 90 in their QM analog (bridge? dark-system? observer? traverse-or-project?), the no-right-adjoint obstruction at full strength, the Tribunal Camp-Marker up for the whole session."
+ },
+ "lens_a": {
+  "rqm": {
+   "rank": 1,
+   "bridge": "No - the fact is the interaction: no premise or postulate is bought to get from the unitary formalism to the relative fact; the interaction is constitutive, not linked.",
+   "dark": "Dissolves relationally - there is no absolute system to be dark: definiteness exists for the interacting pair, and the absolute description whose darkness the objection needs does not exist (the same move special relativity made with simultaneity, on structural ground).",
+   "observer": "No - every system is a reference system: the observer is democratized to any interactant; no consciousness, no classical domain, no privilege, no regress.",
+   "traverse": "Places - the cut is placed at every interaction; no classical extraction functor is claimed or derived; the observation column is kept constitutive.",
+   "filing": "SURVIVOR (the relational placement) - the corpus's grammar-family, MARKED: the theory whose central sentence is C2 itself (no statement of a fact without the reference column)."
+  },
+  "qbism": {
+   "rank": 2,
+   "bridge": "No - the outcome is participation: nothing is posited to link formalism and result; the agent's experience is the primitive the calculus serves, not a posit added to physics.",
+   "dark": "Deletes the third-person question - the definite outcome for-the-world is deleted; the first-person datum is kept as primitive (participation is the event); the deletion is executed, and its price is the licensed one.",
+   "observer": "The agent is constitutive - observer-like, but every agent is one, non-regressive, motivated: the battery's N4 middle bucket.",
+   "traverse": "Neither - the quantum state is the agent's calculus; no classical world is derived from the quantum grammar; the arena of experience is given, and the cut is placed at the agent.",
+   "filing": "SURVIVOR (the participatory placement) - the corpus's grammar-family, MARKED: the first-person calculus is the seismograph's closest field-relative (the one inside-facing program in the QM field)."
+  },
+  "everett": {
+   "rank": 3,
+   "bridge": "No - the formalism is claimed complete: nothing is added to the unitary evolution; the crossing is not bought, it is placed at the index.",
+   "dark": "Declines at the index - the indefinite-outcome system is real (both branches carry records); 'THIS outcome' is indexical, placed, not derived; the residue is the labeled jump (why-am-I-in-this-branch).",
+   "observer": "No - the observer is a system among systems, a branch substructure; no cut, no privilege.",
+   "traverse": "Places, asymptotically - classicality is emergent from decoherence: the projection licensed only in the decoherent limit (READING = EXTENSIONALIZING at the asymptotic edge); the exact classical functor is never claimed - which is what the obstruction permits.",
+   "filing": "SURVIVOR (the unitary-literalist placement) - the branch index is an observer column; the Born derivation is the program's contested rung; the crossing remains owed at the index."
+  },
+  "bohm": {
+   "rank": 4,
+   "bridge": "Yes - the classical layer bought as beables: the wavefunction-plus-particles ontology pairs a guiding field with an always-definite particle layer the quantum grammar does not entail; the guidance equation is the formalism's own current, but the beable layer is an added posit.",
+   "dark": "Dissolves on ontological ground - particles have positions always; there are no dark systems and no indefinite cats; the measurement problem is solved by having the outcome among the primitives.",
+   "observer": "No - measurement is ordinary interaction; the observer plays no physical role; the preferred frame is dynamical structure, not an observer.",
+   "traverse": "Claims traversal by ontology-addition - the classical reading exists, as a bought layer: the adjacency the obstruction refuses, purchased as ontology rather than derived as grammar.",
+   "filing": "SURVIVOR as the measurement problem's literal solution (outcomes primitive, statistics in equilibrium, thermodynamics-grade); FAILURE as wavefunction-completeness (the classical layer bought)."
+  },
+  "histories": {
+   "rank": 5,
+   "bridge": "Yes - the realm rule: the cut, bookkeeping edition; the selection of a consistent family is a framework rule, not a dynamics; the one-history-is-actual is posited within the realm.",
+   "dark": "Declines at fine grain - definiteness is realm-relative; below the quasiclassical graining the framework embraces the indefinite; the single-framework rule disciplines it without deriving it.",
+   "observer": "The realm-chooser - framework-grade, observer-like, non-regressive, motivated: the physicist selecting the family, the theory's known soft spot (histories without a realm-chooser).",
+   "traverse": "Projects - the realm is the chosen projection, licensed by consistency: the classical description booked, not derived; the decoherence theorems earn real law on the way.",
+   "filing": "FAILURE as bridge (histories without a realm-chooser); SURVIVOR as decoherence-law - the classicality theorems file as real third-person law, the field's earned framework."
+  },
+  "grw": {
+   "rank": 6,
+   "bridge": "Yes - the flash-term: the pairing law, dynamical edition; the stochastic localization is a new fundamental law whose function is the delivery of definiteness; the uniqueness of outcomes is legislated, not derived (the parameters are the answer, not a derivation of it).",
+   "dark": "Dissolves by legislation - flashes make outcomes dynamical events; there is no dark system because no system is without flashes; the price re-arises at the law's own bruteness (why this noise, why these rates).",
+   "observer": "No - observer-free throughout: the theory's great virtue; flashes hit constituents regardless of apparatus or mind; the corpus files this at full value.",
+   "traverse": "Claims traversal - the classical reading legislated as law: the adjacency the no-right-adjoint obstruction refuses, stipulated into the dynamics by force of a new postulate; not a derivation of classicality, a purchase of it.",
+   "filing": "FAILURE as bridge (the collapse term bought as dynamical law) + the field's most serious measurement campaign - the one live experimental program in the interpretation field (heating bounds, X-ray limits, LISA Pathfinder), real third-person law at full value."
+  },
+  "copenhagen": {
+   "rank": 7,
+   "bridge": "Yes - the measurement postulate: the cut bought as a rule (P*b-grade); the collapse-on-measurement update is a premise, not a dynamical consequence; the Heisenberg cut's placement is pragmatic, movable, unfounded.",
+   "dark": "Declines - the cat before the cut is not described; the epistemological wing's placement (the frame is unavoidable, not derived) converges with the corpus's own humility sentence, filed as convergence, not exploited.",
+   "observer": "The classical apparatus - the frame the theory cannot read; Bohr's own regress (the apparatus needs the classical description the theory cannot supply from inside); movable and motivated - the middle bucket.",
+   "traverse": "Projects - the classical description is presupposed at the cut: the projection the obstruction refuses, used as the theory's foundation.",
+   "filing": "FAILURE (bridge - the cut as postulate) + the epistemological wing's convergence noted: complementarity as the claim that the frame is unavoidable is a placement of the cut in the methodology, the humility version, not a traversal."
+  },
+  "many-minds": {
+   "rank": 8,
+   "bridge": "Yes - the mind-evolution law: a stochastic psychophysical law pairing matter's branch structure with mind-index fractions, bought as the theory's second fundamental law, priced in the open (the corpus's A5' candor discipline).",
+   "dark": "Inflated - definite minds everywhere: no dark minds, by the bought law; the difference between bright and dark is inflated into the mental base (the panpsychist's move, the mind-edition).",
+   "observer": "The mind is primitive - non-regressive (each mind's experience is primitive, not observed by another), metaphysically privileged: the battery's N4 zero bucket, nearly unanimous.",
+   "traverse": "The mind-index as primitive projection - the reading ('which branch is mine') built in as fundamental stochastic law; the projection, made ontologically primitive.",
+   "filing": "FAILURE (bridge - the R4 patch built in QM: brute covariation, priced openly; physics closure preserved; the exact construction doc 92 refused to build for dualism, found here already built and paying the audited price)."
+  },
+  "wigner": {
+   "rank": 9,
+   "bridge": "Yes - consciousness: P*d/e, the QM-dualism; the mind bought as the collapse's agent, with no law, no rate, no mechanism - the one entry where the consciousness question and the measurement question are claimed to be the same question.",
+   "dark": "By fiat - the difference parked in the unread domain: the mind is where the formalism's indefinite state is declared to resolve, unread by construction.",
+   "observer": "Consciousness IS the special observer - the regress is total (Wigner's friend regress: each collapse certified by a consciousness whose own definiteness needs certifying); the zero bucket, unanimous.",
+   "traverse": "Projects, reified - the classical outcome projected out of the formalism by the mind's act: the projection, reified as mental causation.",
+   "filing": "FAILURE (bridge - the mind bought as the collapse's agent; the QM-dualism; no mind-induced-collapse anomalies ever found - the earned-ground filing, the exact analog of dualism's upheld failure)."
+  }
+ },
+ "lens_a_rank": {
+  "copenhagen": 7,
+  "wigner": 9,
+  "grw": 6,
+  "everett": 3,
+  "bohm": 4,
+  "qbism": 2,
+  "rqm": 1,
+  "histories": 5,
+  "many-minds": 8
+ },
+ "battery_order_rank": {
+  "grw": 1,
+  "bohm": 2,
+  "everett": 3,
+  "rqm": 4,
+  "histories": 5,
+  "qbism": 6,
+  "many-minds": 7,
+  "copenhagen": 8,
+  "wigner": 9
+ },
+ "arithmetic_check": {
+  "all_cells_valid_and_totals_match": true,
+  "cells_checked": 225
+ },
+ "totals": {
+  "6-a": {
+   "copenhagen": 5,
+   "wigner": 4,
+   "grw": 9,
+   "everett": 10,
+   "bohm": 8,
+   "qbism": 6,
+   "rqm": 6,
+   "histories": 6,
+   "many-minds": 4
+  },
+  "6-b": {
+   "copenhagen": 4,
+   "wigner": 4,
+   "grw": 9,
+   "everett": 6,
+   "bohm": 8,
+   "qbism": 5,
+   "rqm": 6,
+   "histories": 6,
+   "many-minds": 5
+  },
+  "6-c": {
+   "copenhagen": 4,
+   "wigner": 3,
+   "grw": 9,
+   "everett": 6,
+   "bohm": 8,
+   "qbism": 5,
+   "rqm": 6,
+   "histories": 4,
+   "many-minds": 5
+  },
+  "6-d": {
+   "copenhagen": 3,
+   "wigner": 3,
+   "grw": 9,
+   "everett": 7,
+   "bohm": 7,
+   "qbism": 6,
+   "rqm": 6,
+   "histories": 6,
+   "many-minds": 5
+  },
+  "6-e": {
+   "copenhagen": 5,
+   "wigner": 4,
+   "grw": 9,
+   "everett": 8,
+   "bohm": 8,
+   "qbism": 6,
+   "rqm": 7,
+   "histories": 6,
+   "many-minds": 5
+  }
+ },
+ "mean_total": {
+  "copenhagen": 4.2,
+  "wigner": 3.6,
+  "grw": 9.0,
+  "everett": 7.4,
+  "bohm": 7.8,
+  "qbism": 5.6,
+  "rqm": 6.2,
+  "histories": 5.6,
+  "many-minds": 4.8
+ },
+ "range_total": {
+  "copenhagen": 2,
+  "wigner": 1,
+  "grw": 0,
+  "everett": 4,
+  "bohm": 1,
+  "qbism": 1,
+  "rqm": 1,
+  "histories": 2,
+  "many-minds": 1
+ },
+ "mean_rank": {
+  "copenhagen": 7.8,
+  "wigner": 8.7,
+  "grw": 1.2,
+  "everett": 2.7,
+  "bohm": 2.4,
+  "qbism": 5.5,
+  "rqm": 4.3,
+  "histories": 5.4,
+  "many-minds": 7.0
+ },
+ "per_scorer_rank": {
+  "6-a": {
+   "copenhagen": 7.0,
+   "wigner": 8.5,
+   "grw": 2.0,
+   "everett": 1.0,
+   "bohm": 3.0,
+   "qbism": 5.0,
+   "rqm": 5.0,
+   "histories": 5.0,
+   "many-minds": 8.5
+  },
+  "6-b": {
+   "copenhagen": 8.5,
+   "wigner": 8.5,
+   "grw": 1.0,
+   "everett": 4.0,
+   "bohm": 2.0,
+   "qbism": 6.5,
+   "rqm": 4.0,
+   "histories": 4.0,
+   "many-minds": 6.5
+  },
+  "6-c": {
+   "copenhagen": 7.5,
+   "wigner": 9.0,
+   "grw": 1.0,
+   "everett": 3.5,
+   "bohm": 2.0,
+   "qbism": 5.5,
+   "rqm": 3.5,
+   "histories": 7.5,
+   "many-minds": 5.5
+  },
+  "6-d": {
+   "copenhagen": 8.5,
+   "wigner": 8.5,
+   "grw": 1.0,
+   "everett": 2.5,
+   "bohm": 2.5,
+   "qbism": 5.0,
+   "rqm": 5.0,
+   "histories": 5.0,
+   "many-minds": 7.0
+  },
+  "6-e": {
+   "copenhagen": 7.5,
+   "wigner": 9.0,
+   "grw": 1.0,
+   "everett": 2.5,
+   "bohm": 2.5,
+   "qbism": 5.5,
+   "rqm": 4.0,
+   "histories": 5.5,
+   "many-minds": 7.5
+  }
+ },
+ "divergence": {
+  "spearman_lens_a_vs_battery": 0.533,
+  "spearman_by_scorer_vs_lens_a": {
+   "6-a": 0.613,
+   "6-b": 0.458,
+   "6-c": 0.496,
+   "6-d": 0.533,
+   "6-e": 0.588
+  },
+  "rank_delta_battery_minus_lens_a": {
+   "copenhagen": 1,
+   "wigner": 0,
+   "grw": -5,
+   "everett": 0,
+   "bohm": -2,
+   "qbism": 4,
+   "rqm": 3,
+   "histories": 0,
+   "many-minds": -1
+  },
+  "lenses_agree_abs_delta_le_1": [
+   "copenhagen",
+   "wigner",
+   "everett",
+   "histories",
+   "many-minds"
+  ],
+  "mild_divergence_delta_2": [
+   "bohm"
+  ],
+  "inversions_abs_delta_ge_3": [
+   "grw",
+   "qbism",
+   "rqm"
+  ]
+ },
+ "parity_and_gifts": {
+  "n1_split": {
+   "cells": {
+    "grw": {
+     "6-a": 2,
+     "6-b": 2,
+     "6-c": 2,
+     "6-d": 2,
+     "6-e": 2
+    },
+    "rqm": {
+     "6-a": 1,
+     "6-b": 1,
+     "6-c": 1,
+     "6-d": 1,
+     "6-e": 1
+    },
+    "bohm": {
+     "6-a": 2,
+     "6-b": 2,
+     "6-c": 2,
+     "6-d": 2,
+     "6-e": 2
+    },
+    "everett": {
+     "6-a": 2,
+     "6-b": 1,
+     "6-c": 1,
+     "6-d": 1,
+     "6-e": 1
+    },
+    "qbism": {
+     "6-a": 1,
+     "6-b": 1,
+     "6-c": 1,
+     "6-d": 1,
+     "6-e": 1
+    }
+   },
+   "note": "the N1 dynamics/ontology split: GRW's flash-law scores 2 from every scorer; RQM's interaction-fact scores 1 from every scorer - a UNANIMOUS split, not a camp differential: the rubric's 'entailed by the theory's own dynamics or ontology' is read dynamics-first, so a new dynamical law counts as entailment while an ontological constitution counts as a stipulated primitive. The corpus's Lens A prices the SAME pair in reverse (the law is a bought bridge; the constitution is a placement). The differential is criterion-relative, measured twice now, with the valence flipped - the mirror of doc 92's N1 parity cell."
+  },
+  "self_gift_everett_N5": {
+   "cells": {
+    "6-a": 2,
+    "6-b": 0,
+    "6-c": 0,
+    "6-d": 0,
+    "6-e": 1
+   },
+   "note": "the Everettian scored his own camp N5 = 2 where the other four scored 0, 0, 0, 1 - the battery's one clean self-gift, disclosed in his meta ('biggest indulgence risk: Everett N5=2'). No other scorer agreed."
+  },
+  "self_gift_rqm_N2": {
+   "cells": {
+    "6-a": 1,
+    "6-b": 1,
+    "6-c": 1,
+    "6-d": 1,
+    "6-e": 2
+   },
+   "note": "the participatory scorer scored his camp's strongest theory N2 = 2 where the other four scored 1 - the +1 self-gift, disclosed in his meta ('wanting N1=2 for QBism/RQM - resisted; both openly retain primitives')."
+  },
+  "persona_invariance": {
+   "grw_total_by_scorer": {
+    "6-a": 9,
+    "6-b": 9,
+    "6-c": 9,
+    "6-d": 9,
+    "6-e": 9
+   },
+   "everett_total_by_scorer": {
+    "6-a": 10,
+    "6-b": 6,
+    "6-c": 6,
+    "6-d": 7,
+    "6-e": 8
+   },
+   "grw_range": 0,
+   "everett_range": 4,
+   "note": "the doc 92 pattern REPLICATED: where evidence is, the persona spread collapses (GRW: 9,9,9,9,9 - range 0, unanimous first for every scorer, every persona, rivals included); where grammar is, it opens (Everett: 10,6,6,7,8 - range 4, the field's widest, the entry whose standing turns on the indexical/decision-theoretic grammar). Measured twice: doc 92 (RM range 3 vs the tested entries' 1-2) and doc 93 (Everett 4 vs GRW 0)."
+  }
+ },
+ "family": {
+  "lens_a_family": [
+   "qbism",
+   "rqm"
+  ],
+  "lens_a_family_mean_battery_rank": {
+   "qbism": 5.5,
+   "rqm": 4.3
+  },
+  "note": "the family under the marker: rqm and qbism at Lens A ranks 1 and 2 (the corpus's grammar filing its own family, as doc 92 predicted, as the marker requires the filing to say); the same family at battery mean ranks 4.3 and 5.5 - mid-field. The family does not sweep. Everett (Lens A 3rd, battery 3rd) is the placement both lenses certify and is NOT claimed for the family: the branch index is an observer column, but the wavefunction-as-world is a state-as-world commitment the corpus's grammar does not share."
+ },
+ "verdict": {
+  "protocol": "dual-lens, as pre-registered at doc 92 Part 9: the four campaigns AND the neutral five criteria, both lenses on the same field, the divergence filed as part of the verdict, the Tribunal Camp-Marker up for the whole session, no sole-survivor cap available.",
+  "lens_a_top3": [
+   "rqm",
+   "qbism",
+   "everett"
+  ],
+  "lens_a_top3_marker": "the corpus's grammar-family prediction CONFIRMED and MARKED: doc 92 predicted the family would be filed at the top of Lens A again; it was; the marker is up and the prediction is part of the record, not a surprise.",
+  "lens_b_top3": [
+   "grw",
+   "bohm",
+   "everett"
+  ],
+  "lenses_agree": [
+   "copenhagen",
+   "wigner",
+   "everett",
+   "histories",
+   "many-minds"
+  ],
+  "agreement_read": "where the lenses agree, file with confidence: Everett (3/3) - the placement both grammars certify; Wigner (9/9) - the QM-dualism, the audit's cleanest upheld failure; histories (5/5) - the mixed framework filing; Copenhagen (7/8) - the cut priced low by both; many-minds (8/7) - the R4 patch priced in both.",
+  "inversions": [
+   "grw",
+   "qbism",
+   "rqm"
+  ],
+  "inversion_read": "the inversions, filed under the Tribunal Camp-Marker: GRW (Lens A 6th, Lens B unanimous 1st) - the grammar's clearest bought bridge is the criteria's clearest physics; RQM (1st/4th) and QBism (2nd/6th) - the grammar's family does not sweep the neutral criteria. The inversions are symmetric: each lens has its family; the corpus prices the dynamical primitive as a bought bridge and the ontological one as a placement; the criteria price the dynamical primitive as entailment and the ontological one as a stipulated primitive. Neither lens is the field's truth.",
+  "spearman": 0.533,
+  "cap_issued": false,
+  "cap_note": "no sole-survivor cap is issued - the protocol was designed so that this verdict cannot be what doc 90's was; the doc 92 cap discipline holds: the two-lens topology is the verdict.",
+  "reduction": "the QM field, run through both lenses, collapses onto the corpus's own fork (C5): state-as-world (the residue placed at index / particle / flash / realm - Everett, Bohm, GRW, histories) vs state-as-relation (the absolute deleted, the event kept - RQM, QBism), with the bridges (Copenhagen's postulate, Wigner's mind, many-minds' mind-law) failing both lenses. The measurement problem is the corpus's wall in physical dress: the non-derivability of the definite from the unitary is the non-derivability of the inside from the extensional; the no-right-adjoint obstruction is its formal shadow.",
+  "quietism_premium_check": "the doc 90 conversion is NOT repeated: RQM's and QBism's N5 = 0 files as N5 = 0, no premium, no 'principled refusal' upgrade - the audit's lesson applied and demonstrated."
+ },
+ "scorer_meta": {
+  "6-a": "Hardest cells: N1 for Copenhagen and Wigner - their steelmen rebrand the postulate as bookkeeping or the non-arbitrary terminus; my pull toward 0 was checked against the rubric's 'internal to the core claim' clause. Biggest indulgence risk: Everett N5=2 - I verified consistency: the same collapse-bounding experiments that score GRW 2 also probe Everett's no-collapse claim, though no decisive macroscopic test exists. I overrode my suspicion of state-demoting views to give QBism N2=2 for executed deflation. Many-minds N1=0 fits my ontology-suspicion but follows the rubric's wording. RUBRIC LOADING: N5 structurally rewards added dynamics; N1 rewards dynamical entailment - both favor the dynamics-family by design.",
+  "6-b": "Hardest calls: N1's 0/1 boundary and N2's deflation verdicts. Persona pulled hardest toward 0 on Everett's N2 and Copenhagen's N1; checked by crediting decoherence and Deutsch-Wallace (Everett stays 1) and weighing Copenhagen's bookkeeping self-understanding against its load-bearing postulate (0). Audited self-favoritism: Bohm takes N3=1 (preferred frame) and N5=1 (untested nonequilibrium), while GRW's live experiments earn N5=2. Indulgence disclosed: I scored QBism/RQM/histories deflations as partial, not executed - my literalism about outcomes. RUBRIC LOADING: N5 structurally rewards GRW's empirical program; N4's 'motivated, non-regressive' slot cushions agent- and mind-centered theories; N2's legitimized deflation favors re-description over dynamics.",
+  "6-c": "Hardest: N1 and N2 - when is a primitive external-and-load-bearing versus internal-and-structured, and when does deflation count as executed? My collapse commitments pulled hard toward 0s for Copenhagen, histories, Everett, and QBism. I indulged it on copenhagen N1 and histories N1, where 'brute external link' genuinely fits. I checked it elsewhere: Everett's 1s honor the Deutsch-Wallace literature; QBism's 1s honor executed deflation; many-minds N2=2 honors delivery by construction. Resisted loyalty on GRW's N3 (heating, preferred frame). RUBRIC LOADING: N5 structurally rewards tested dynamical deviations; N1's 'entailed by own dynamics' invites postulate-self-serving, which I declined for many-minds.",
+  "6-d": "Hardest was N1: the 0/1 line between an openly priced, structured primitive (Everett, QBism, many-minds) and a brute external load-bearing link (Copenhagen, Wigner) is judgment, not rubric. I caught myself flip-flopping on Copenhagen's N2 and Wigner's N5, resolved by exact wording. RUBRIC LOADS LAKATOSIAN: N5 rewards GRW's empirical ambition, so empirically equivalent readings (Everett, QBism, RQM) score 0 regardless of internal coherence. N4's 'privileged frame' clause penalizes Bohm for dynamical structure that is not an observer, while GRW's Lorentz tension escapes N4 because its steelman omits frames. N2's deflation clause mildly favors QBism and Everett. Scored steelmans, not weak versions.",
+  "6-e": "Hardest: N1 and N5. N1's 'internal primitive' category catches nearly every steelman, so I discriminated by entailment - dynamics or ontology entailing outcomes (GRW, Bohm) versus axiomatic or psychophysical bridges (Everett's indexical plus decision axioms; Wigner, many-minds) versus acknowledged postulates (QBism's normative Born, RQM's actualization, Copenhagen's update rule). N5's 'beyond standard QM' I read as distinctive commitments with in-principle falsifiers - hence Everett/many-minds 1, bookkeeping theories 0. PERSONA PULLS, CHECKED: wanting N1=2 for QBism/RQM - resisted; both openly retain primitives. Wanting to punish GRW's reified wavefunction - no rubric category; docked only its genuine heating/Lorentz tension. Everett docked only on N1 despite branch-suspicion, crediting Deutsch-Wallace at full strength. The rubric rewards added dynamics and prices constitutive observers."
+ }
+}
